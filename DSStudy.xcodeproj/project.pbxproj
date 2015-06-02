@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC46D0711B0F2DA70086A01A /* DSEnum.c in Sources */ = {isa = PBXBuildFile; fileRef = AC46D06F1B0F2DA70086A01A /* DSEnum.c */; };
 		ACD6E3D61B03A8EB00CA4498 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ACD6E3D51B03A8EB00CA4498 /* main.c */; };
-		ACE469071B0D105B00676B69 /* HW_1_Sizeof.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE469051B0D105B00676B69 /* HW_1_Sizeof.c */; };
-		ACE4690A1B0D112C00676B69 /* HW_2_(papa mama).c in Sources */ = {isa = PBXBuildFile; fileRef = ACE469081B0D112C00676B69 /* HW_2_(papa mama).c */; };
-		ACE4690D1B0D132C00676B69 /* HW_3_macros.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE4690B1B0D132C00676B69 /* HW_3_macros.c */; };
-		ACE469101B0DAA7200676B69 /* HW_3_macrosTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE4690E1B0DAA7200676B69 /* HW_3_macrosTest.c */; };
 		ACE469131B0DBB5F00676B69 /* DSFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE469111B0DBB5F00676B69 /* DSFunc.c */; };
 		ACE469161B0DBD1B00676B69 /* DSSquare.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE469141B0DBD1B00676B69 /* DSSquare.c */; };
 		ACE469191B0DBD9400676B69 /* SDLoop.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE469171B0DBD9400676B69 /* SDLoop.c */; };
+		ACE4691C1B0F1E1800676B69 /* HomeWork1.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE4691B1B0F1E1800676B69 /* HomeWork1.c */; };
+		ACE4691F1B0F1E3000676B69 /* HomeWork2.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE4691D1B0F1E3000676B69 /* HomeWork2.c */; };
+		ACE469221B0F1E4900676B69 /* HomeWork3.c in Sources */ = {isa = PBXBuildFile; fileRef = ACE469201B0F1E4900676B69 /* HomeWork3.c */; };
+		ACFCD2891B12D22D0024B342 /* HomeWork4.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2871B12D22D0024B342 /* HomeWork4.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,26 +37,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		ACFCD27D1B0F34B30024B342 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC46D06F1B0F2DA70086A01A /* DSEnum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSEnum.c; path = DSEnum/DSEnum.c; sourceTree = "<group>"; };
+		AC46D0701B0F2DA70086A01A /* DSEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSEnum.h; path = DSEnum/DSEnum.h; sourceTree = "<group>"; };
 		AC630B551B0487F70068EF28 /* 111 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 111; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD6E3D21B03A8EB00CA4498 /* DSStudy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSStudy; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD6E3D51B03A8EB00CA4498 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		ACE469051B0D105B00676B69 /* HW_1_Sizeof.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HW_1_Sizeof.c; path = "HW 1/HW_1_Sizeof.c"; sourceTree = "<group>"; };
-		ACE469061B0D105B00676B69 /* HW_1_Sizeof.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HW_1_Sizeof.h; path = "HW 1/HW_1_Sizeof.h"; sourceTree = "<group>"; };
-		ACE469081B0D112C00676B69 /* HW_2_(papa mama).c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "HW_2_(papa mama).c"; path = "HW 2/HW_2_(papa mama).c"; sourceTree = "<group>"; };
-		ACE469091B0D112C00676B69 /* HW_2_(papa mama).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HW_2_(papa mama).h"; path = "HW 2/HW_2_(papa mama).h"; sourceTree = "<group>"; };
-		ACE4690B1B0D132C00676B69 /* HW_3_macros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HW_3_macros.c; path = "HW 3/HW_3_macros.c"; sourceTree = "<group>"; };
-		ACE4690C1B0D132C00676B69 /* HW_3_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HW_3_macros.h; path = "HW 3/HW_3_macros.h"; sourceTree = "<group>"; };
-		ACE4690E1B0DAA7200676B69 /* HW_3_macrosTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HW_3_macrosTest.c; path = Test/HW_3_macrosTest.c; sourceTree = "<group>"; };
-		ACE4690F1B0DAA7200676B69 /* HW_3_macrosTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HW_3_macrosTest.h; path = Test/HW_3_macrosTest.h; sourceTree = "<group>"; };
 		ACE469111B0DBB5F00676B69 /* DSFunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSFunc.c; path = DSFunc/DSFunc.c; sourceTree = "<group>"; };
 		ACE469121B0DBB5F00676B69 /* DSFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSFunc.h; path = DSFunc/DSFunc.h; sourceTree = "<group>"; };
 		ACE469141B0DBD1B00676B69 /* DSSquare.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSSquare.c; path = DSSquare/DSSquare.c; sourceTree = "<group>"; };
 		ACE469151B0DBD1B00676B69 /* DSSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSSquare.h; path = DSSquare/DSSquare.h; sourceTree = "<group>"; };
 		ACE469171B0DBD9400676B69 /* SDLoop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = SDLoop.c; path = SDLoop/SDLoop.c; sourceTree = "<group>"; };
 		ACE469181B0DBD9400676B69 /* SDLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDLoop.h; path = SDLoop/SDLoop.h; sourceTree = "<group>"; };
+		ACE4691A1B0F1E0C00676B69 /* HomeWork1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeWork1.h; path = HomeWork1/HomeWork1.h; sourceTree = "<group>"; };
+		ACE4691B1B0F1E1800676B69 /* HomeWork1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HomeWork1.c; path = HomeWork1/HomeWork1.c; sourceTree = "<group>"; };
+		ACE4691D1B0F1E3000676B69 /* HomeWork2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HomeWork2.c; path = HomeWork2/HomeWork2.c; sourceTree = "<group>"; };
+		ACE4691E1B0F1E3000676B69 /* HomeWork2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeWork2.h; path = HomeWork2/HomeWork2.h; sourceTree = "<group>"; };
+		ACE469201B0F1E4900676B69 /* HomeWork3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HomeWork3.c; path = HomeWork3/HomeWork3.c; sourceTree = "<group>"; };
+		ACE469211B0F1E4900676B69 /* HomeWork3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeWork3.h; path = HomeWork3/HomeWork3.h; sourceTree = "<group>"; };
+		ACFCD27F1B0F34B30024B342 /* DSTestSamples */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSTestSamples; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFCD2871B12D22D0024B342 /* HomeWork4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HomeWork4.c; path = HomeWork4/HomeWork4.c; sourceTree = "<group>"; };
+		ACFCD2881B12D22D0024B342 /* HomeWork4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeWork4.h; path = HomeWork4/HomeWork4.h; sourceTree = "<group>"; };
+		ACFCD28A1B13A8C80024B342 /* Tasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tasks.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,15 +87,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACFCD27C1B0F34B30024B342 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		AC630B5C1B04DE000068EF28 /* HomeWork */ = {
 			isa = PBXGroup;
 			children = (
-				ACE469041B0D104100676B69 /* HW 3 macros */,
-				ACE469001B0D0FDD00676B69 /* HW 2 PapaMama */,
-				ACE468FC1B0D0EC400676B69 /* HW 1 Sizeof */,
+				ACFCD2861B12D2070024B342 /* HomeWork4 */,
+				ACE469041B0D104100676B69 /* HomeWork3 */,
+				ACE469001B0D0FDD00676B69 /* HomeWork2 */,
+				ACE468FC1B0D0EC400676B69 /* HomeWork1 */,
 			);
 			name = HomeWork;
 			sourceTree = "<group>";
@@ -95,6 +117,8 @@
 				ACE469151B0DBD1B00676B69 /* DSSquare.h */,
 				ACE469171B0DBD9400676B69 /* SDLoop.c */,
 				ACE469181B0DBD9400676B69 /* SDLoop.h */,
+				AC46D06F1B0F2DA70086A01A /* DSEnum.c */,
+				AC46D0701B0F2DA70086A01A /* DSEnum.h */,
 			);
 			name = samples;
 			sourceTree = "<group>";
@@ -112,6 +136,7 @@
 			children = (
 				ACD6E3D21B03A8EB00CA4498 /* DSStudy */,
 				AC630B551B0487F70068EF28 /* 111 */,
+				ACFCD27F1B0F34B30024B342 /* DSTestSamples */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +144,7 @@
 		ACD6E3D41B03A8EB00CA4498 /* DSStudy */ = {
 			isa = PBXGroup;
 			children = (
+				ACFCD28A1B13A8C80024B342 /* Tasks.h */,
 				AC630B5E1B05E8950068EF28 /* samples */,
 				AC630B5C1B04DE000068EF28 /* HomeWork */,
 				ACD6E3DD1B03A94500CA4498 /* Source */,
@@ -130,8 +156,6 @@
 		ACD6E3DC1B03A93700CA4498 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				ACE4690E1B0DAA7200676B69 /* HW_3_macrosTest.c */,
-				ACE4690F1B0DAA7200676B69 /* HW_3_macrosTest.h */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -144,31 +168,40 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		ACE468FC1B0D0EC400676B69 /* HW 1 Sizeof */ = {
+		ACE468FC1B0D0EC400676B69 /* HomeWork1 */ = {
 			isa = PBXGroup;
 			children = (
-				ACE469051B0D105B00676B69 /* HW_1_Sizeof.c */,
-				ACE469061B0D105B00676B69 /* HW_1_Sizeof.h */,
+				ACE4691B1B0F1E1800676B69 /* HomeWork1.c */,
+				ACE4691A1B0F1E0C00676B69 /* HomeWork1.h */,
 			);
-			name = "HW 1 Sizeof";
+			name = HomeWork1;
 			sourceTree = "<group>";
 		};
-		ACE469001B0D0FDD00676B69 /* HW 2 PapaMama */ = {
+		ACE469001B0D0FDD00676B69 /* HomeWork2 */ = {
 			isa = PBXGroup;
 			children = (
-				ACE469081B0D112C00676B69 /* HW_2_(papa mama).c */,
-				ACE469091B0D112C00676B69 /* HW_2_(papa mama).h */,
+				ACE4691D1B0F1E3000676B69 /* HomeWork2.c */,
+				ACE4691E1B0F1E3000676B69 /* HomeWork2.h */,
 			);
-			name = "HW 2 PapaMama";
+			name = HomeWork2;
 			sourceTree = "<group>";
 		};
-		ACE469041B0D104100676B69 /* HW 3 macros */ = {
+		ACE469041B0D104100676B69 /* HomeWork3 */ = {
 			isa = PBXGroup;
 			children = (
-				ACE4690B1B0D132C00676B69 /* HW_3_macros.c */,
-				ACE4690C1B0D132C00676B69 /* HW_3_macros.h */,
+				ACE469201B0F1E4900676B69 /* HomeWork3.c */,
+				ACE469211B0F1E4900676B69 /* HomeWork3.h */,
 			);
-			name = "HW 3 macros";
+			name = HomeWork3;
+			sourceTree = "<group>";
+		};
+		ACFCD2861B12D2070024B342 /* HomeWork4 */ = {
+			isa = PBXGroup;
+			children = (
+				ACFCD2871B12D22D0024B342 /* HomeWork4.c */,
+				ACFCD2881B12D22D0024B342 /* HomeWork4.h */,
+			);
+			name = HomeWork4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +241,23 @@
 			productReference = ACD6E3D21B03A8EB00CA4498 /* DSStudy */;
 			productType = "com.apple.product-type.tool";
 		};
+		ACFCD27E1B0F34B30024B342 /* DSTestSamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACFCD2851B0F34B30024B342 /* Build configuration list for PBXNativeTarget "DSTestSamples" */;
+			buildPhases = (
+				ACFCD27B1B0F34B30024B342 /* Sources */,
+				ACFCD27C1B0F34B30024B342 /* Frameworks */,
+				ACFCD27D1B0F34B30024B342 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSTestSamples;
+			productName = DSTestSamples;
+			productReference = ACFCD27F1B0F34B30024B342 /* DSTestSamples */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +272,9 @@
 					};
 					ACD6E3D11B03A8EB00CA4498 = {
 						CreatedOnToolsVersion = 6.3.1;
+					};
+					ACFCD27E1B0F34B30024B342 = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
 			};
@@ -239,6 +292,7 @@
 			targets = (
 				ACD6E3D11B03A8EB00CA4498 /* DSStudy */,
 				AC630B541B0487F70068EF28 /* 111 */,
+				ACFCD27E1B0F34B30024B342 /* DSTestSamples */,
 			);
 		};
 /* End PBXProject section */
@@ -256,13 +310,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE469161B0DBD1B00676B69 /* DSSquare.c in Sources */,
-				ACE469101B0DAA7200676B69 /* HW_3_macrosTest.c in Sources */,
+				ACFCD2891B12D22D0024B342 /* HomeWork4.c in Sources */,
+				ACE4691C1B0F1E1800676B69 /* HomeWork1.c in Sources */,
 				ACE469191B0DBD9400676B69 /* SDLoop.c in Sources */,
-				ACE4690A1B0D112C00676B69 /* HW_2_(papa mama).c in Sources */,
+				ACE469221B0F1E4900676B69 /* HomeWork3.c in Sources */,
 				ACE469131B0DBB5F00676B69 /* DSFunc.c in Sources */,
-				ACE4690D1B0D132C00676B69 /* HW_3_macros.c in Sources */,
+				ACE4691F1B0F1E3000676B69 /* HomeWork2.c in Sources */,
 				ACD6E3D61B03A8EB00CA4498 /* main.c in Sources */,
-				ACE469071B0D105B00676B69 /* HW_1_Sizeof.c in Sources */,
+				AC46D0711B0F2DA70086A01A /* DSEnum.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACFCD27B1B0F34B30024B342 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +440,24 @@
 			};
 			name = Release;
 		};
+		ACFCD2831B0F34B30024B342 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACFCD2841B0F34B30024B342 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -407,6 +487,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		ACFCD2851B0F34B30024B342 /* Build configuration list for PBXNativeTarget "DSTestSamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACFCD2831B0F34B30024B342 /* Debug */,
+				ACFCD2841B0F34B30024B342 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

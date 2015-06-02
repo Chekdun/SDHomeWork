@@ -10,5 +10,9 @@
 #define __DSStudy__HW_1__
 
 #include <stdio.h>
+//#include "HomeWork1.c"
+
+#define DSCallSizeof(type) \
+    printf("Size of " #type " = %lu bytes\n", sizeof(type))
 
 #endif /* defined(__DSStudy__HW_1__) */

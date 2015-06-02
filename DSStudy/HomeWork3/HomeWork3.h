@@ -1,16 +1,16 @@
+////
+////  HomeWork3.h
+////  DSStudy
+////
+////  Created by Denis Sidorov on 20.05.15.
+////  Copyright (c) 2015 DenisSidorov. All rights reserved.
+////
 //
-//  HomeWork3.h
-//  DSStudy
+//#ifndef __DSStudy__HW_3_macros__
+//#define __DSStudy__HW_3_macros__
 //
-//  Created by Denis Sidorov on 20.05.15.
-//  Copyright (c) 2015 DenisSidorov. All rights reserved.
+//#include <stdio.h>
 //
-
-#ifndef __DSStudy__HW_3_macros__
-#define __DSStudy__HW_3_macros__
-
-#include <stdio.h>
-
 //DSPrimitiveType
 //
 //
@@ -24,9 +24,9 @@
 //    printf("Value Long", value);
 //}
 //
-//#define DSValueOutput (type, spec) \ 
+//#define DSValueOutput (type, spec)\
 //void OutputLong_##type(int value) { \
 //    printf(#type "Value = " #spec, value); \
 //}
-
-#endif /* defined(__DSStudy__HW_3_macros__) */
+//
+//#endif /* defined(__DSStudy__HW_3_macros__) */

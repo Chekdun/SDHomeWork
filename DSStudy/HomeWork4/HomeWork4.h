@@ -12,3 +12,5 @@
 #include <stdio.h>
 
 #endif /* defined(__DSStudy__HomeWork4__) */
+#include <stdbool.h>
+

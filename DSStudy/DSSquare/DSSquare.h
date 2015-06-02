@@ -1,14 +1,14 @@
+////
+////  DSSquare.h
+////  DSStudy
+////
+////  Created by Denis Sidorov on 21.05.15.
+////  Copyright (c) 2015 DenisSidorov. All rights reserved.
+////
 //
-//  DSSquare.h
-//  DSStudy
+//#ifndef __DSStudy__DSSquare__
+//#define __DSStudy__DSSquare__
 //
-//  Created by Denis Sidorov on 21.05.15.
-//  Copyright (c) 2015 DenisSidorov. All rights reserved.
+//#include <stdio.h>
 //
-
-#ifndef __DSStudy__DSSquare__
-#define __DSStudy__DSSquare__
-
-#include <stdio.h>
-
-#endif /* defined(__DSStudy__DSSquare__) */
+//#endif /* defined(__DSStudy__DSSquare__) */

@@ -10,27 +10,35 @@
 
 #include "HomeWork2.h"
 
-int func (int value) {
-    if (value % 3 == 0){
-        printf("mama\n");
+
+typedef enum {
+    nothing = 0,
+    mother = 3,
+    father = 5,
+    motherFather = 15
+ } DSFamily;
+
+int DSOneOfTheParents (int value) {
+    if (value % motherFather == 0) {
+        printf("%s", "МамаПапа\n");
+        return motherFather;
+    } else if (value % mother == 0) {
+        printf("%s", "Мама\n");
+        return mother;
+    } else if (value % father == 0) {
+        printf("%s", "Папа\n");
+        return father;
     }
-    if (value % 5 == 0){
-        printf("papa\n");
+    return nothing;
+}
+
+void DSTestMamaPapa (int value) {
+    for (int i = 1; i < value; i++) {
+        printf("%d\n", i);
+        DSOneOfTheParents(i);
     }
-    if (value % 15 == 0){
-        printf("mamapapa\n");
-    }
-    return 0;
-    
 }
 
 
-int main(int argc, const char * argv[]) {
-    //func(1000);
-    for (int a = 0; a < 1000; a++){
-        printf("%d\n", a);
-        func(a);
-    }
-    
-    return 0;
-}
+
+
