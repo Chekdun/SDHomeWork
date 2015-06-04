@@ -34,7 +34,7 @@ DSHuman *DSHumanCreateWithParametrs(DSGender gender, char *name) {
     DSHuman *newHuman = DSObjectCreateOfType(DSHuman);
     newHuman->_sex = gender;
     DSString *nameValue = DSStringCreateWithData(name);
-    newHuman->_name = nameValue;
+    DSHumanSetName(newHuman, nameValue);
     DSObjectRelease(nameValue);
     return newHuman;
 }
@@ -47,7 +47,7 @@ void DSHumanMarriage(DSHuman *human1, DSHuman *human2) {
         
         if (DSHumanGetPartner(woman) !=man) {
             DSHumanDivorse(woman);
-            DSHumanDivorse(DSHumanGetPartner(man));
+            DSHumanDivorse(man);
             
             DSObjectRetain(man);
             
@@ -57,7 +57,15 @@ void DSHumanMarriage(DSHuman *human1, DSHuman *human2) {
     }
 }
 
-char *DSHumanGetName(DSHuman *ptrhuman) {
+void DSHumanSetName(DSHuman *object, DSString *name) {
+    if (NULL != object && object->_name != name) {
+        DSObjectRetain(name);
+        DSObjectRelease(object->_name);
+        object->_name = name;
+    }
+}
+
+DSString *DSHumanGetName(DSHuman *ptrhuman) {
     if (ptrhuman != NULL) {
         return ptrhuman->_name;
     }
@@ -105,13 +113,13 @@ void __DSHumanDeallocate(DSHuman *human) {
 
 void DSHumanGenderOutput(DSHuman *human) {
     if (DSHumanGetGender(human) == 1) {
-        printf("Gender of %s is male\n", DSHumanGetName(human));
+        printf("Gender of %s is male\n", DSStringGetData(DSHumanGetName(human)));
         return;
     }
     if (DSHumanGetGender(human) == 2) {
-        printf("Gender of %s is female\n", DSHumanGetName(human));
+        printf("Gender of %s is female\n", DSStringGetData(DSHumanGetName(human)));
     } else {
-        printf("Gender of %s is male\n", DSHumanGetName(human));
+        printf("Gender of %s is male\n", DSStringGetData(DSHumanGetName(human)));
     }
 }
 

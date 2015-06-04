@@ -7,6 +7,7 @@
 //
 
 #include <string.h>
+#include <stdlib.h>
 
 #include "DSString.h"
 #include "DSObject.h"

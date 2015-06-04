@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 DenisSidorov. All rights reserved.
 //
 
+
 #ifndef __DSHuman__DSObject__
 #define __DSHuman__DSObject__
 
-#include <stdlib.h>
 
 #define DSObjectCreateOfType(type) \
 __DSObjectCreate(sizeof(type), (DSObjectDeallocatorCallback)__##type##Deallocate)

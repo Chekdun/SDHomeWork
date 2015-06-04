@@ -11,7 +11,7 @@
 #pragma mark
 #pragma mark - privat declaration
 
-static const uint8_t kBitCount = 8;
+// static const uint8_t kBitCount = 8;
 
 #pragma mark
 #pragma mark - public 

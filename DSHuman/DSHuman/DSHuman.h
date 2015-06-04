@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 
+#include "DSString.h"
+
 typedef enum {
     DSHumanUndefined,
     DSHumanMale,
@@ -29,7 +31,7 @@ extern
 DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, char *name);
 
 extern
-char *DSHumanGetName(DSHuman *ptrhuman);
+DSString *DSHumanGetName(DSHuman *ptrhuman);
 
 extern
 int DSHumanGetAge(DSHuman *ptrhuman);
@@ -41,13 +43,16 @@ extern
 DSHuman *DSHumanGetChildren(DSHuman *ptrhuman);
 
 extern
-void DSHumanSetChild (DSHuman *human, DSHuman *child);
+void DSHumanSetChild(DSHuman *human, DSHuman *child);
 
 extern
 DSHuman *DSHumanGetPartner(DSHuman *ptrhuman);
 
 extern
 DSHuman DSHumanSetPartner(DSHuman *partner);
+
+extern
+void DSHumanSetName(DSHuman *object, DSString *name);
 
 extern
 DSHuman *DSHumanGetMother(DSHuman *ptrhuman);

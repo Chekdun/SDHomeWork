@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACB32C581B1FFCC2002AC410 /* DSHumanTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */; };
+		ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5B1B208868002AC410 /* DSArrayTest.c */; };
+		ACB32C601B208880002AC410 /* DSArray.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5E1B208880002AC410 /* DSArray.c */; };
 		ACCD48A01B1EADC700973BCE /* DSObjectTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACCD489E1B1EADC700973BCE /* DSObjectTest.c */; };
 		ACFCD2A01B143F7C0024B342 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD29F1B143F7C0024B342 /* main.c */; };
 		ACFCD2AA1B143FD70024B342 /* DSObject.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2A81B143FD70024B342 /* DSObject.c */; };
 		ACFCD2AD1B143FEF0024B342 /* DSHuman.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2AB1B143FEF0024B342 /* DSHuman.c */; };
-		ACFCD2B51B15F7A10024B342 /* DSHumanTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2B31B15F7A10024B342 /* DSHumanTest.c */; };
 		ACFCD2BC1B1AF4320024B342 /* DSStructures.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2BA1B1AF4320024B342 /* DSStructures.c */; };
 		ACFCD2BF1B1B02920024B342 /* DSBitOutput.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2BD1B1B02920024B342 /* DSBitOutput.c */; };
 		ACFCD2D61B1DDDA50024B342 /* DSString.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2D41B1DDDA50024B342 /* DSString.c */; };
@@ -40,6 +42,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DSHumanTest.c; sourceTree = "<group>"; };
+		ACB32C571B1FFCC2002AC410 /* DSHumanTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHumanTest.h; sourceTree = "<group>"; };
+		ACB32C5B1B208868002AC410 /* DSArrayTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSArrayTest.c; path = TEST/DSArrayTest/DSArrayTest.c; sourceTree = "<group>"; };
+		ACB32C5C1B208868002AC410 /* DSArrayTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSArrayTest.h; path = TEST/DSArrayTest/DSArrayTest.h; sourceTree = "<group>"; };
+		ACB32C5E1B208880002AC410 /* DSArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSArray.c; path = DSArray/DSArray.c; sourceTree = "<group>"; };
+		ACB32C5F1B208880002AC410 /* DSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSArray.h; path = DSArray/DSArray.h; sourceTree = "<group>"; };
 		ACCD489E1B1EADC700973BCE /* DSObjectTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSObjectTest.c; path = TEST/DSObjectTest/DSObjectTest.c; sourceTree = "<group>"; };
 		ACCD489F1B1EADC700973BCE /* DSObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSObjectTest.h; path = TEST/DSObjectTest/DSObjectTest.h; sourceTree = "<group>"; };
 		ACFCD29C1B143F7C0024B342 /* DSHuman */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSHuman; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,8 +57,6 @@
 		ACFCD2AB1B143FEF0024B342 /* DSHuman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSHuman.c; path = DSHuman/DSHuman.c; sourceTree = "<group>"; };
 		ACFCD2AC1B143FEF0024B342 /* DSHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSHuman.h; path = DSHuman/DSHuman.h; sourceTree = "<group>"; };
 		ACFCD2AE1B1442620024B342 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		ACFCD2B31B15F7A10024B342 /* DSHumanTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSHumanTest.c; path = ../../DSObject/DSHumanTest/DSHumanTest.c; sourceTree = "<group>"; };
-		ACFCD2B41B15F7A10024B342 /* DSHumanTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSHumanTest.h; path = ../../DSObject/DSHumanTest/DSHumanTest.h; sourceTree = "<group>"; };
 		ACFCD2BA1B1AF4320024B342 /* DSStructures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSStructures.c; path = DSStructures/DSStructures.c; sourceTree = "<group>"; };
 		ACFCD2BB1B1AF4320024B342 /* DSStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSStructures.h; path = DSStructures/DSStructures.h; sourceTree = "<group>"; };
 		ACFCD2BD1B1B02920024B342 /* DSBitOutput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSBitOutput.c; path = DSBitOutput/DSBitOutput.c; sourceTree = "<group>"; };
@@ -80,11 +86,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACB32C591B20881A002AC410 /* DSArray */ = {
+			isa = PBXGroup;
+			children = (
+				ACB32C5E1B208880002AC410 /* DSArray.c */,
+				ACB32C5F1B208880002AC410 /* DSArray.h */,
+			);
+			name = DSArray;
+			sourceTree = "<group>";
+		};
+		ACB32C5A1B208846002AC410 /* DSArrayTest */ = {
+			isa = PBXGroup;
+			children = (
+				ACB32C5B1B208868002AC410 /* DSArrayTest.c */,
+				ACB32C5C1B208868002AC410 /* DSArrayTest.h */,
+			);
+			name = DSArrayTest;
+			sourceTree = "<group>";
+		};
 		ACCD489C1B1EAD0400973BCE /* DSHumanTest */ = {
 			isa = PBXGroup;
 			children = (
-				ACFCD2B41B15F7A10024B342 /* DSHumanTest.h */,
-				ACFCD2B31B15F7A10024B342 /* DSHumanTest.c */,
+				ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */,
+				ACB32C571B1FFCC2002AC410 /* DSHumanTest.h */,
 			);
 			name = DSHumanTest;
 			path = TEST/DSHumanTest;
@@ -122,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				ACFCD2AE1B1442620024B342 /* Task.h */,
+				ACB32C591B20881A002AC410 /* DSArray */,
 				ACFCD2D31B1DDD890024B342 /* DSString */,
 				ACFCD2A71B143F8E0024B342 /* DSObject */,
 				ACFCD2A61B143F810024B342 /* DSHuman */,
@@ -151,6 +176,7 @@
 		ACFCD2B21B15F7660024B342 /* TEST */ = {
 			isa = PBXGroup;
 			children = (
+				ACB32C5A1B208846002AC410 /* DSArrayTest */,
 				ACCD489D1B1EAD8800973BCE /* DSObjectTest */,
 				ACCD489C1B1EAD0400973BCE /* DSHumanTest */,
 				ACFCD2D71B1DEE870024B342 /* DSStringTest */,
@@ -267,12 +293,14 @@
 			files = (
 				ACCD48A01B1EADC700973BCE /* DSObjectTest.c in Sources */,
 				ACFCD2D61B1DDDA50024B342 /* DSString.c in Sources */,
-				ACFCD2B51B15F7A10024B342 /* DSHumanTest.c in Sources */,
 				ACFCD2DA1B1DEF030024B342 /* DSStringTest.c in Sources */,
 				ACFCD2AD1B143FEF0024B342 /* DSHuman.c in Sources */,
 				ACFCD2A01B143F7C0024B342 /* main.c in Sources */,
 				ACFCD2BF1B1B02920024B342 /* DSBitOutput.c in Sources */,
 				ACFCD2AA1B143FD70024B342 /* DSObject.c in Sources */,
+				ACB32C581B1FFCC2002AC410 /* DSHumanTest.c in Sources */,
+				ACB32C601B208880002AC410 /* DSArray.c in Sources */,
+				ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */,
 				ACFCD2BC1B1AF4320024B342 /* DSStructures.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
