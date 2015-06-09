@@ -11,4 +11,49 @@
 
 #include <stdio.h>
 
+#include "stdbool.h"
+#include "DSObject.h"
+
+
+static const uint64_t kDSNotFound = UINT64_MAX;
+
+typedef struct {
+    DSObject _super;
+    
+    void **data;
+    uint64_t _count;
+    uint64_t _capacity;
+} DSArray;
+
+extern
+void *DSArrayCreateWithCapacity(uint64_t capacity);
+
+extern
+uint64_t DSArrayAddObject(DSArray *array, void *object);
+
+extern
+uint64_t DSArrayGetCount(DSArray *array);
+
+extern
+bool DSArrayContainsObect(DSArray *array, void *object);
+
+extern
+uint64_t DSArrayGetIndexOfObject(DSArray *array, void *object);
+
+extern
+void DSArrayGetObjectAtIndex(DSArray *array, uint64_t *index);
+
+extern
+void DSArrayRemoveObjectAtIndex(DSArray *array, uint64_t *index);
+
+extern
+void DSArrayRemoveAllObjects(DSArray *array);
+
+extern
+void __DSArrayDeallocate(void *object);
+
+
+
+
+
 #endif /* defined(__DSHuman__DSArray__) */

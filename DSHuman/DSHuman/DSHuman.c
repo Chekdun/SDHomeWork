@@ -30,6 +30,15 @@ struct DSHuman {
 #pragma mark -
 #pragma mark - Public Implementation
 
+void DSHumanDivorse(DSHuman *human) {
+    if (NULL != human && DSHumanGetPartner(human) != NULL) {
+        DSHuman *man = (DSHumanGetGender(human) == DSHumanMale) ? human : human->_partner;
+        human->_partner->_partner = NULL;
+        human->_partner = NULL;
+        DSObjectRelease(man);
+    }
+}
+
 DSHuman *DSHumanCreateWithParametrs(DSGender gender, char *name) {
     DSHuman *newHuman = DSObjectCreateOfType(DSHuman);
     newHuman->_sex = gender;
@@ -57,14 +66,6 @@ void DSHumanMarriage(DSHuman *human1, DSHuman *human2) {
     }
 }
 
-void DSHumanSetName(DSHuman *object, DSString *name) {
-    if (NULL != object && object->_name != name) {
-        DSObjectRetain(name);
-        DSObjectRelease(object->_name);
-        object->_name = name;
-    }
-}
-
 DSString *DSHumanGetName(DSHuman *ptrhuman) {
     if (ptrhuman != NULL) {
         return ptrhuman->_name;
@@ -73,24 +74,44 @@ DSString *DSHumanGetName(DSHuman *ptrhuman) {
     return NULL;
 }
 
-int DSHumanGetAge( DSHuman *ptrhuman) {
+void DSHumanSetName(DSHuman *object, DSString *name) {
+    if (NULL != object && object->_name != name) {
+        DSObjectRetain(name);
+        DSObjectRelease(object->_name);
+        object->_name = name;
+    }
+}
+
+int DSHumanGetAge(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _age : 0;
 }
 
-DSGender DSHumanGetGender( DSHuman *ptrhuman) {
-    if (ptrhuman != NULL) {
+DSGender DSHumanGetGender(DSHuman *ptrhuman) {
         return ptrhuman -> _sex;
     }
-    
-    return DSHumanUndefined;
-}
 
 DSHuman *DSHumanGetChildren(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _children[0] : NULL;
 }
 
+void DSHumanSetChild(DSHuman *human, DSHuman *child) {
+    for (int iterator = 0; iterator < 20; iterator++) {
+        if (human->_children[iterator] == NULL) {
+            human->_children[iterator] = child;
+            human->_childrenCount++;
+            break;
+        }
+    }
+}
+
 DSHuman *DSHumanGetPartner(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _partner : NULL;
+}
+
+void DSHumanSetPartner(DSHuman *human1, DSHuman *human2) {
+    if (NULL != human1) {
+        object->_human2 = human2;
+    }
 }
 
 DSHuman *DSHumanGetMother(DSHuman *ptrhuman) {
@@ -108,6 +129,7 @@ int DSHumanGetChildrenCount(DSHuman *ptrhuman) {
 
 
 void __DSHumanDeallocate(DSHuman *human) {
+    
     __DSObjectDeallocate(human);
 }
 
@@ -135,24 +157,9 @@ DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, char 
 
 }
 
-void DSHumanSetChild(DSHuman *human, DSHuman *child) {
-    for (int iterator = 0; iterator < 20; iterator++) {
-        if (human->_children[iterator] == NULL) {
-            human->_children[iterator] = child;
-            human->_childrenCount++;
-            break;
-        }
-    }
-}
 
-void DSHumanDivorse(DSHuman *human) {
-  if (NULL != human && DSHumanGetPartner(human) != NULL) {
-        DSHuman *man = (DSHumanGetGender(human) == DSHumanMale) ? human : human->_partner;
-        human->_partner->_partner = NULL;
-        human->_partner = NULL;
-        DSObjectRelease(man);
-    }
-}
+
+
     
 
 
