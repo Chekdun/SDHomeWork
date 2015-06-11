@@ -17,8 +17,8 @@
 
 int main() {
 
-    DSStringTest();
-    DSObjectCreationTest();
+//    DSStringTest();
+//    DSObjectCreationTest();
     DSHumanTest();
     
     

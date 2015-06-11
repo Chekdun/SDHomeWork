@@ -22,16 +22,19 @@ typedef enum {
 typedef struct DSHuman DSHuman;
 
 extern
-void DSHumanDivorse(DSHuman *human);
+DSHuman *DSHumanCreateWithParametrs(DSGender gender, DSString *name);
 
 extern
-DSHuman *DSHumanCreateWithParametrs(DSGender gender, char *name);
+DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, DSString *name);
 
 extern
 void DSHumanMarriage(DSHuman *human1, DSHuman *human2);
 
-//extern
-//DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, char *name);
+extern
+void DSHumanDivorse(DSHuman *human);
+
+#pragma mark -
+#pragma mark Accessors
 
 extern
 DSString *DSHumanGetName(DSHuman *ptrhuman);
@@ -52,15 +55,19 @@ extern
 void DSHumanSetChild(DSHuman *human, DSHuman *child);
 
 extern
+void DSHumanSetPartner (DSHuman *object, DSHuman *ptrhuman);
+
+extern
 DSHuman *DSHumanGetPartner(DSHuman *ptrhuman);
 
 extern
-DSHuman DSHumanSetPartner(DSHuman *partner);
-
-
+void DSHumanSetMother(DSHuman *object, DSHuman *mother);
 
 extern
 DSHuman *DSHumanGetMother(DSHuman *ptrhuman);
+
+extern
+void DSHumanSetFather(DSHuman *object, DSHuman *father);
 
 extern
 DSHuman *DSHumanGetFather(DSHuman *ptrhuman);
@@ -73,11 +80,5 @@ void __DSHumanDeallocate(DSHuman *human);
 
 extern
 void DSHumanGenderOutput(DSHuman *human);
-
-
-
-
-
-
 
 #endif /* defined(__DSHuman__DSHuman__) */

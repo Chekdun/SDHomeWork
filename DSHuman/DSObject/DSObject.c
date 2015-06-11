@@ -12,7 +12,6 @@
 #include "DSObject.h"
 
 
-
 void *__DSObjectCreate(size_t objectSize, DSObjectDeallocatorCallback deallocateCallback) {
     assert(0 != objectSize);
     

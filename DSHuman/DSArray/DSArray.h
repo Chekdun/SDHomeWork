@@ -29,7 +29,7 @@ extern
 void *DSArrayCreateWithCapacity(uint64_t capacity);
 
 extern
-uint64_t DSArrayAddObject(DSArray *array, void *object);
+void DSArrayAddObject(DSArray *array, void *object);
 
 extern
 uint64_t DSArrayGetCount(DSArray *array);
@@ -52,7 +52,10 @@ void DSArrayRemoveAllObjects(DSArray *array);
 extern
 void __DSArrayDeallocate(void *object);
 
-
+//static
+//void DSArraySetCapacity(DSArray *array, uint64_t capacity);
+//
+//
 
 
 

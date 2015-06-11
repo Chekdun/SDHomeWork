@@ -14,12 +14,24 @@
 static
 void DSArraySetCapacity(DSArray *array, uint64_t capacity);
 
+static
+void DSArraySouldResize(DSArray *array);
+
+static
+void DSArrayResize(DSArray *array, uint64_t requiredCapacity);
+
+static
+void DSArraySetCount(DSArray *array, uint64_t count);
+
+static
+void DSArraySetObjectAtIndex(DSArray *array, void object, uint64_t index);
+
+
 #pragma mark -
 #pragma mark - public methods
 
 void *DSArrayCreateWithCapacity(uint64_t capacity) {
     DSArray *result = DSObjectCreateOfType(DSArray);
-   
     DSArraySetCapacity(result, capacity);
     
     return result;
@@ -31,8 +43,17 @@ void __DSArrayDiallocate(void *object) {
     __DSObjectDeallocate(object);
 }
 
+void DSArrayAddObject (DSArray *array, void object) {
+    if (NULL !- array && NULL !- object) {
+        uint64_t count = DSArrayGetCount(array);
+        if (true = DSArraySouldResize(array)) {
+            DSArrayResize(array, count + 1);
+        }
+        DSArraySetCount(array, count + 1);
+        DSArraySetObjectAtIndex(array, object, count);
+    }
+    
+}
+
 #pragma mark -
 #pragma mark - privat implementation
-
-static
-void DSArraySetCapacity(DSArray *array, uint64_t capacity);

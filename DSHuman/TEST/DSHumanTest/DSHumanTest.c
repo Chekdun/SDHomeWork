@@ -14,38 +14,42 @@
 
 void DSHumanTest(void) {
 
-// Создаем двух человек
+//  Create 2 human
     DSHuman *anastasya = DSHumanCreateWithParametrs(DSHumanFemale, "Anastasya");
     DSHuman *andrey = DSHumanCreateWithParametrs(DSHumanMale, "Andrey");
 
     assert(DSObjectGetReferenceCount(andrey) == 1);
     assert(DSObjectGetReferenceCount(anastasya) == 1);
     
-// Женим двух человек
+//  maried
     DSHumanMarriage(andrey, anastasya);
+    assert(DSHumanGetPartner(anastasya) == andrey);
+    assert(DSHumanGetPartner(andrey) == anastasya);
+    
     
     assert(DSObjectGetReferenceCount(andrey) == 2);
     assert(DSObjectGetReferenceCount(anastasya) == 1);
-
-//  валим anastasya
-    DSObjectRetain(anastasya);
-    assert(DSObjectGetReferenceCount(anastasya)== 2);
-    DSObjectRelease(anastasya);
     
-//  развод
+    //  divorce anasatasye
     DSHumanDivorse(anastasya);
     
     assert(DSObjectGetReferenceCount(anastasya) == 1);
     assert(DSObjectGetReferenceCount(andrey) == 1);
     
-//  валим всех
-    DSObjectRelease(anastasya);
-    DSObjectRelease(andrey);
+    assert(DSHumanGetPartner(anastasya) == NULL);
+    assert(DSHumanGetPartner(andrey) == NULL);
     
-//   создаем ребенка
-    DSHumanCreateChild(anastasya, andrey, DSHumanMale, "timo");
-    
-    
+//  create child
+    DSHuman *timo = DSHumanCreateChild(anastasya, andrey, DSHumanMale, "Timo");
+
+    assert(DSHumanGetChildrenCount(anastasya) == 1);
+    assert(DSHumanGetChildrenCount(andrey) == 1);
+    assert(DSObjectGetReferenceCount(timo) == 2);
     
 
+//  kill all
+    DSObjectRelease(anastasya);
+    DSObjectRelease(andrey);
+    DSObjectRelease(timo);
+    
 }
