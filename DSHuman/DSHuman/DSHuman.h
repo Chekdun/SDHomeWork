@@ -52,7 +52,7 @@ extern
 DSHuman *DSHumanGetChildren(DSHuman *ptrhuman);
 
 extern
-void DSHumanSetChild(DSHuman *human, DSHuman *child);
+void DSHumanAddChild(DSHuman *human, DSHuman *child);
 
 extern
 void DSHumanSetPartner (DSHuman *object, DSHuman *ptrhuman);

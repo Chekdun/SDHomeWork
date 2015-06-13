@@ -15,7 +15,7 @@ static
 void DSArraySetCapacity(DSArray *array, uint64_t capacity);
 
 static
-void DSArraySouldResize(DSArray *array);
+void DSArrayShouldResize(DSArray *array);
 
 static
 void DSArrayResize(DSArray *array, uint64_t requiredCapacity);
@@ -24,7 +24,7 @@ static
 void DSArraySetCount(DSArray *array, uint64_t count);
 
 static
-void DSArraySetObjectAtIndex(DSArray *array, void object, uint64_t index);
+void DSArraySetObjectAtIndex(DSArray *array, object, uint64_t index);
 
 
 #pragma mark -
@@ -43,10 +43,10 @@ void __DSArrayDiallocate(void *object) {
     __DSObjectDeallocate(object);
 }
 
-void DSArrayAddObject (DSArray *array, void object) {
-    if (NULL !- array && NULL !- object) {
+void DSArrayAddObject (DSArray *array, void *object) {
+    if (NULL != array && NULL != *object) {
         uint64_t count = DSArrayGetCount(array);
-        if (true = DSArraySouldResize(array)) {
+        if (true = DSArrayShouldResize(array)) {
             DSArrayResize(array, count + 1);
         }
         DSArraySetCount(array, count + 1);

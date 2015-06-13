@@ -26,9 +26,15 @@ struct DSHuman {
     DSHuman *_father;
     int _childrenCount;
 };
-
 #pragma mark -
 #pragma mark - Public Implementation
+
+static
+void  DSHumanSetSex (DSHuman *human, DSGender sex) {
+    if (NULL != human) {
+        human->_sex = sex;
+    }
+}
 
 DSHuman *DSHumanCreateWithParametrs(DSGender gender, DSString *name) {
     DSHuman *newHuman = DSObjectCreateOfType(DSHuman);
@@ -45,8 +51,8 @@ DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, DSStr
     child->_father = papa;
     DSObjectRetain(child);
     
-    DSHumanSetChild(mama, child);
-    DSHumanSetChild(papa, child);
+    DSHumanAddChild(mama, child);
+    DSHumanAddChild(papa, child);
     
     return child;
 }
@@ -75,8 +81,9 @@ void DSHumanMarriage(DSHuman *human1, DSHuman *human2) {
 
 void DSHumanDivorse(DSHuman *human) {
     if (NULL != human && DSHumanGetPartner(human) != NULL) {
-        DSHuman *man = (DSHumanGetGender(human) == DSHumanMale) ? human : human->_partner;
-        human->_partner->_partner = NULL;
+        DSHuman *humanPartner = DSHumanGetPartner(human);
+        DSHuman *man = (DSHumanGetGender(human) == DSHumanMale) ? human : humanPartner;
+        humanPartner->_partner = NULL;
         human->_partner = NULL;
         DSObjectRelease(man);
     }
@@ -110,17 +117,24 @@ DSHuman *DSHumanGetChildren(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _children[0] : NULL;
 }
 
-void DSHumanSetChild(DSHuman *human, DSHuman *child) {
+void DSHumanAddChild(DSHuman *human, DSHuman *child) {
     if (NULL != human) {
-    for (int index = 0; index < 20; index++) {
-        if (human->_children[index] == NULL) {
-            human->_children[index] = child;
-            human->_childrenCount++;
-            break;
+        for (int index = 0; index < 20; index++) {
+            if (human->_children[index] == NULL) {
+                DSHuman previousChild = human->_children[index];
+                if (previousChild != child) {
+                    DSObjectRetain(child);
+                    DSObjectRetain(previousChild);
+                
+                human->_children[index] = child;
+                human->_childrenCount++;
+                    }
+                break;
             }
         }
     }
 }
+
 void DSHumanSetPartner(DSHuman *object, DSHuman *partner) {
     if (NULL != object) {
         object->_partner = partner;
