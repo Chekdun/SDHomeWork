@@ -17,15 +17,15 @@ typedef enum {
     DSHumanUndefined,
     DSHumanMale,
     DSHumanFemale
-} DSGender;
+} DSHumanGender;
 
 typedef struct DSHuman DSHuman;
 
 extern
-DSHuman *DSHumanCreateWithParametrs(DSGender gender, DSString *name);
+DSHuman *DSHumanCreateWithParametrs(DSHumanGender gender, DSString *name);
 
 extern
-DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, DSString *name);
+DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSHumanGender gender, DSString *name);
 
 extern
 void DSHumanMarriage(DSHuman *human1, DSHuman *human2);
@@ -46,7 +46,7 @@ extern
 int DSHumanGetAge(DSHuman *ptrhuman);
 
 extern
-DSGender DSHumanGetGender(DSHuman *ptrhuman);
+DSHumanGender DSHumanGetGender(DSHuman *ptrhuman);
 
 extern
 DSHuman *DSHumanGetChildren(DSHuman *ptrhuman);

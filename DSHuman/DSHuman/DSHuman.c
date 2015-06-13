@@ -19,7 +19,7 @@ struct DSHuman {
     
     DSString *_name;
     int _age;
-    DSGender _sex;
+    DSHumanGender _sex;
     DSHuman *_children[20];
     DSHuman *_partner;
     DSHuman *_mother;
@@ -30,13 +30,13 @@ struct DSHuman {
 #pragma mark - Public Implementation
 
 static
-void  DSHumanSetSex (DSHuman *human, DSGender sex) {
+void  DSHumanSetSex (DSHuman *human, DSHumanGender sex) {
     if (NULL != human) {
         human->_sex = sex;
     }
 }
 
-DSHuman *DSHumanCreateWithParametrs(DSGender gender, DSString *name) {
+DSHuman *DSHumanCreateWithParametrs(DSHumanGender gender, DSString *name) {
     DSHuman *newHuman = DSObjectCreateOfType(DSHuman);
     newHuman->_sex = gender;
     DSString *nameValue = DSStringCreateWithData(name);
@@ -45,23 +45,34 @@ DSHuman *DSHumanCreateWithParametrs(DSGender gender, DSString *name) {
     return newHuman;
 }
 
-DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, DSString *name) {
+DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSHumanGender gender, DSString *name) {
     if (NULL != mama && NULL != papa) {
-    DSHuman *child = DSHumanCreateWithParametrs(gender, name);
-    child->_mother = mama;
-    child->_father = papa;
-    DSObjectRetain(child);
-    
-    DSHumanAddChild(mama, child);
-    DSHumanAddChild(papa, child);
-    
-    return child;
+    DSHuman *newChild = DSHumanCreateWithParametrs(gender, name);
+        
+        DSHumanSetMother(newChild, mama);
+        DSHumanSetFather(newChild, papa);
+        DSObjectRetain(newChild);
+
+        return newChild;
     }
     return 0;
 }
 
+//MRFHuman *MRFHumanCreateChild(MRFHuman *mother, MRFHuman *father) {
+//    if (NULL != mother && NULL != father) {
+//        MRFHuman *newChild = MRFHumanCreateWithParameters("", MRFHumanRandomGender(), 0);
+//        
+//        MRFHumanSetMother(newChild, mother);
+//        MRFHumanSetFather(newChild, father);
+//        MRFHumanAddChild(mother, father, newChild);
+//        
+//        return newChild;
+//    }
+//    return 0;
+//}
+
 void DSHumanMarriage(DSHuman *human1, DSHuman *human2) {
-    DSGender humanGender = DSHumanGetGender(human1);
+    DSHumanGender humanGender = DSHumanGetGender(human1);
     if (NULL != human1
         && NULL != human2
         && DSHumanGetGender(human1) != DSHumanGetGender(human2)
@@ -112,7 +123,7 @@ int DSHumanGetAge(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _age : 0;
 }
 
-DSGender DSHumanGetGender(DSHuman *ptrhuman) {
+DSHumanGender DSHumanGetGender(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _sex : 0;
     }
 
