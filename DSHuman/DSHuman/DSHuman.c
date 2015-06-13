@@ -46,6 +46,7 @@ DSHuman *DSHumanCreateWithParametrs(DSGender gender, DSString *name) {
 }
 
 DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, DSString *name) {
+    if (NULL != mama && NULL != papa) {
     DSHuman *child = DSHumanCreateWithParametrs(gender, name);
     child->_mother = mama;
     child->_father = papa;
@@ -55,6 +56,8 @@ DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, DSStr
     DSHumanAddChild(papa, child);
     
     return child;
+    }
+    return 0;
 }
 
 void DSHumanMarriage(DSHuman *human1, DSHuman *human2) {
