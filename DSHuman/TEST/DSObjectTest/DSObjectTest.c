@@ -27,28 +27,28 @@ void DSObjectBiheviorTest();
 
 void DSObjectCreationTest() {
 
-    // создание объекта
+    // create of object
     DSObject *object = DSObjectCreateOfType(DSObject);
     
-    //  объект должен быть NULL
+    //  object must be NULL
     assert(NULL != object);
     
-    //  увеличение reference count на 1
+    //   reference count  1
     assert(1 == DSObjectGetReferenceCount(object));
     
-    //  объект retaning
+    //  object retaning
     DSObject *retaningObject = DSObjectRetain(object);
     
-    //      retained объект равен объекту
+    //      object = retaningObject
     assert(object = retaningObject);
     
-    //      reference count  у объекта = 2
+    //      object reference count = 2
      assert(2 == DSObjectGetReferenceCount(object));
     
-    //  releasing объект
+    //  releasing object
     DSObjectRelease(retaningObject);
     
-    //  reference count уменьшился до 1
+    //  reference count must be 1
     assert(1 == DSObjectGetReferenceCount(object));
 
     DSObjectRelease(object);

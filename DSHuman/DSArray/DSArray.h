@@ -20,7 +20,7 @@ static const uint64_t kDSNotFound = UINT64_MAX;
 typedef struct {
     DSObject _super;
     
-    void **data;
+    void **_data;
     uint64_t _count;
     uint64_t _capacity;
 } DSArray;

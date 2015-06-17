@@ -10,9 +10,14 @@
 #include "DSHumanTest.h"
 #include "DSHuman.h"
 #include "DSObject.h"
+#include "DSMacros.h"
 
 
 void DSHumanTest(void) {
+    
+   
+    
+    
 
 //  Create 2 human
     DSHuman *anastasya = DSHumanCreateWithParametrs(DSHumanFemale, "Anastasya");
@@ -45,8 +50,12 @@ void DSHumanTest(void) {
     assert(DSHumanGetChildrenCount(anastasya) == 1);
     assert(DSHumanGetChildrenCount(andrey) == 1);
     assert(DSObjectGetReferenceCount(timo) == 2);
-    
 
+//  remove child, Anastasya children count must be 1
+    DSHumanRemoveChild(anastasya, timo);
+    
+    assert(DSObjectGetReferenceCount(timo) == 1);
+    
 //  kill all
     DSObjectRelease(anastasya);
     DSObjectRelease(andrey);

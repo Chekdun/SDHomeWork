@@ -7,11 +7,16 @@
 //
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <string.h>
+#include <assert.h>
 
 #include "DSHuman.h"
 #include "DSObject.h"
 #include "DSString.h"
+#include "DSMacros.h"
+
+
+
 
 
 struct DSHuman {
@@ -26,17 +31,37 @@ struct DSHuman {
     DSHuman *_father;
     int _childrenCount;
 };
+
+const
+uint64_t kDSChildrenNotFound = UINT64_MAX;
+
+const
+uint64_t kDSChildrenCountMax = 20;
+
+#pragma mark -
+#pragma mark - Privat Declaration
+
+static
+void  DSHumanSetSex (DSHuman *human, DSHumanGender sex);
+
+static
+void DSHumanSetName(DSHuman *object, DSString *name);
+
+static
+void DSHumanSetPartner (DSHuman *object, DSHuman *ptrhuman);
+
+static
+void DSHumanSetMother(DSHuman *object, DSHuman *mother);
+
+static
+void DSHumanSetFather(DSHuman *object, DSHuman *father);
+
+
+
 #pragma mark -
 #pragma mark - Public Implementation
 
-static
-void  DSHumanSetSex (DSHuman *human, DSHumanGender sex) {
-    if (NULL != human) {
-        human->_sex = sex;
-    }
-}
-
-DSHuman *DSHumanCreateWithParametrs(DSHumanGender gender, DSString *name) {
+DSHuman *DSHumanCreateWithParametrs(DSHumanGender gender, char *name) {
     DSHuman *newHuman = DSObjectCreateOfType(DSHuman);
     newHuman->_sex = gender;
     DSString *nameValue = DSStringCreateWithData(name);
@@ -44,33 +69,6 @@ DSHuman *DSHumanCreateWithParametrs(DSHumanGender gender, DSString *name) {
     DSObjectRelease(nameValue);
     return newHuman;
 }
-
-DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSHumanGender gender, DSString *name) {
-    if (NULL != mama && NULL != papa) {
-    DSHuman *newChild = DSHumanCreateWithParametrs(gender, name);
-        
-        DSHumanSetMother(newChild, mama);
-        DSHumanSetFather(newChild, papa);
-        DSObjectRetain(newChild);
-
-        return newChild;
-    }
-    return 0;
-}
-
-//MRFHuman *MRFHumanCreateChild(MRFHuman *mother, MRFHuman *father) {
-//    if (NULL != mother && NULL != father) {
-//        MRFHuman *newChild = MRFHumanCreateWithParameters("", MRFHumanRandomGender(), 0);
-//        
-//        MRFHumanSetMother(newChild, mother);
-//        MRFHumanSetFather(newChild, father);
-//        MRFHumanAddChild(mother, father, newChild);
-//        
-//        return newChild;
-//    }
-//    return 0;
-//}
-
 void DSHumanMarriage(DSHuman *human1, DSHuman *human2) {
     DSHumanGender humanGender = DSHumanGetGender(human1);
     if (NULL != human1
@@ -104,19 +102,7 @@ void DSHumanDivorse(DSHuman *human) {
 }
 
 DSString *DSHumanGetName(DSHuman *ptrhuman) {
-    if (ptrhuman != NULL) {
-        return ptrhuman->_name;
-    }
-    
-    return NULL;
-}
-
-void DSHumanSetName(DSHuman *object, DSString *name) {
-    if (NULL != object && object->_name != name) {
-        DSObjectRetain(name);
-        DSObjectRelease(object->_name);
-        object->_name = name;
-    }
+    DSPointerValueGetter(ptrhuman, name);
 }
 
 int DSHumanGetAge(DSHuman *ptrhuman) {
@@ -127,70 +113,16 @@ DSHumanGender DSHumanGetGender(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _sex : 0;
     }
 
-DSHuman *DSHumanGetChildren(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _children[0] : NULL;
-}
-
-void DSHumanAddChild(DSHuman *human, DSHuman *child) {
-    if (NULL != human) {
-        for (int index = 0; index < 20; index++) {
-            if (human->_children[index] == NULL) {
-                DSHuman previousChild = human->_children[index];
-                if (previousChild != child) {
-                    DSObjectRetain(child);
-                    DSObjectRetain(previousChild);
-                
-                human->_children[index] = child;
-                human->_childrenCount++;
-                    }
-                break;
-            }
-        }
-    }
-}
-
-void DSHumanSetPartner(DSHuman *object, DSHuman *partner) {
-    if (NULL != object) {
-        object->_partner = partner;
-    }
-}
-
 DSHuman *DSHumanGetPartner(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _partner : NULL;
-}
-
-void DSHumanSetMother(DSHuman *object, DSHuman *mother) {
-    if (NULL != object && NULL != mother) {
-        object->_mother = mother;
-    }
 }
 
 DSHuman *DSHumanGetMother(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _mother : 0;
 }
 
-void DSHumanSetFather(DSHuman *object, DSHuman *father) {
-    if (NULL != object && NULL != father) {
-        object->_father = father;
-    }
-}
-
 DSHuman *DSHumanGetFather(DSHuman *ptrhuman) {
     return (NULL != ptrhuman) ? ptrhuman -> _father : 0;
-}
-
-int DSHumanGetChildrenCount(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _childrenCount : 0;
-}
-
-
-
-void __DSHumanDeallocate(DSHuman *human) {
-    DSHumanDivorse(human);
-    DSHumanSetName(human, NULL);
-    
-    
-    __DSObjectDeallocate(human);
 }
 
 void DSHumanGenderOutput(DSHuman *human) {
@@ -201,22 +133,122 @@ void DSHumanGenderOutput(DSHuman *human) {
     if (DSHumanGetGender(human) == 2) {
         printf("Gender of %s is female\n", DSStringGetData(DSHumanGetName(human)));
     } else {
-        printf("Gender of %s is male\n", DSStringGetData(DSHumanGetName(human)));
+        printf("Gender of %s is unknow\n", DSStringGetData(DSHumanGetName(human)));
     }
 }
 
 
+DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSHumanGender gender, char *name) {
+    if (NULL != mama && NULL != papa) {
+        DSHuman *newChild = DSHumanCreateWithParametrs(gender, name);
+        
+        DSHumanAddChild(mama, newChild);
+        DSHumanAddChild(papa, newChild);
+        DSHumanSetMother(newChild, mama);
+        DSHumanSetFather(newChild, papa);
+        DSObjectRelease(newChild);
+        
+        return newChild;
+    }
+    return 0;
+}
+
+void DSHumanRemoveChild(DSHuman *object, DSHuman *child) {
+    if (NULL != child) {
+        
+        uint64_t index = DSHumanGetIndexOfChild(object, child);
+        uint64_t count = DSHumanGetChildrenCount(object);
+        
+        if (index != kDSChildrenNotFound) {
+            while (index < count) {
+                object->_children[index] = object->_children[index + 1];
+                index++;
+            }
+            object->_childrenCount--;
+            DSObjectRelease(child);
+        }
+    }
+}
+
+DSHuman *DSHumanGetChildren(DSHuman *ptrhuman) {
+    return (NULL != ptrhuman) ? ptrhuman -> _children[0] : NULL;
+}
+
+int DSHumanGetChildrenCount(DSHuman *ptrhuman) {
+    return (NULL != ptrhuman) ? ptrhuman -> _childrenCount : 0;
+}
+
+void DSHumanAddChild(DSHuman *human, DSHuman *child) {
+    if (NULL != human) {
+        for (int index = 0; index < 20; index++) {
+            if (human->_children[index] == NULL) {
+                DSHuman *previousChild = human->_children[index];
+                if (previousChild != child) {
+                    DSObjectRetain(child);
+                    DSObjectRelease(previousChild);
+                    
+                    human->_children[index] = child;
+                    human->_childrenCount++;
+                }
+                break;
+            }
+        }
+    }
+}
+
+//uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSHuman *child) {
+//    uint64_t result = kDSChildrenNotFound;
+//    if (NULL != object) {
+//        for (uint64_t index = 0; index < kDSChildrenCountMax; index++) {
+//            if (object->_children[index] == child) {
+//                result = index;
+//            }
+//        }
+//    }
+//    
+//    return result;
+//}
+
+void __DSHumanDeallocate(DSHuman *human) {
+    DSHumanDivorse(human);
+    DSHumanSetName(human, NULL);
+    
+    __DSObjectDeallocate(human);
+}
+
+#pragma mark -
+#pragma mark - Privat Declaration
 
 
+void  DSHumanSetSex (DSHuman *human, DSHumanGender sex) {
+    if (NULL != human) {
+        human->_sex = sex;
+    }
+}
 
+void DSHumanSetName(DSHuman *object, DSString *name) {
+    if (NULL != object && object->_name != name) {
+        DSObjectRetain(name);
+        DSObjectRelease(object->_name);
+        object->_name = name;
+    }
+}
 
+void DSHumanSetPartner(DSHuman *object, DSHuman *partner) {
+    if (NULL != object) {
+        object->_partner = partner;
+    }
+}
 
+void DSHumanSetMother(DSHuman *object, DSHuman *mother) {
+    if (NULL != object && NULL != mother) {
+        object->_mother = mother;
+    }
+}
 
-
-
-
-
-
-
-
+void DSHumanSetFather(DSHuman *object, DSHuman *father) {
+    if (NULL != object && NULL != father) {
+        object->_father = father;
+    }
+}
 

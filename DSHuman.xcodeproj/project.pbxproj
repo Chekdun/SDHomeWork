@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6C435C1B2C76FC003C6642 /* DSMacros.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6C435A1B2C76FC003C6642 /* DSMacros.c */; };
 		ACB32C581B1FFCC2002AC410 /* DSHumanTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */; };
 		ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5B1B208868002AC410 /* DSArrayTest.c */; };
 		ACB32C601B208880002AC410 /* DSArray.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5E1B208880002AC410 /* DSArray.c */; };
@@ -42,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC6C435A1B2C76FC003C6642 /* DSMacros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSMacros.c; path = TEST/DSMacros/DSMacros.c; sourceTree = "<group>"; };
+		AC6C435B1B2C76FC003C6642 /* DSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSMacros.h; path = TEST/DSMacros/DSMacros.h; sourceTree = "<group>"; };
 		ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DSHumanTest.c; sourceTree = "<group>"; };
 		ACB32C571B1FFCC2002AC410 /* DSHumanTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHumanTest.h; sourceTree = "<group>"; };
 		ACB32C5B1B208868002AC410 /* DSArrayTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSArrayTest.c; path = TEST/DSArrayTest/DSArrayTest.c; sourceTree = "<group>"; };
@@ -86,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC6C43591B2C76CD003C6642 /* DSMacros */ = {
+			isa = PBXGroup;
+			children = (
+				AC6C435A1B2C76FC003C6642 /* DSMacros.c */,
+				AC6C435B1B2C76FC003C6642 /* DSMacros.h */,
+			);
+			name = DSMacros;
+			sourceTree = "<group>";
+		};
 		ACB32C591B20881A002AC410 /* DSArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +188,7 @@
 		ACFCD2B21B15F7660024B342 /* TEST */ = {
 			isa = PBXGroup;
 			children = (
+				AC6C43591B2C76CD003C6642 /* DSMacros */,
 				ACB32C5A1B208846002AC410 /* DSArrayTest */,
 				ACCD489D1B1EAD8800973BCE /* DSObjectTest */,
 				ACCD489C1B1EAD0400973BCE /* DSHumanTest */,
@@ -302,6 +315,7 @@
 				ACB32C601B208880002AC410 /* DSArray.c in Sources */,
 				ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */,
 				ACFCD2BC1B1AF4320024B342 /* DSStructures.c in Sources */,
+				AC6C435C1B2C76FC003C6642 /* DSMacros.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
