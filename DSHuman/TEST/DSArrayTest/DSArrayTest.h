@@ -11,4 +11,7 @@
 
 #include <stdio.h>
 
+extern
+void DSArrayBehaviourTest(void);
+
 #endif /* defined(__DSHuman__DSArrayTest__) */

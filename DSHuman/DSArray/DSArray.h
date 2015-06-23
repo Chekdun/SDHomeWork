@@ -10,8 +10,8 @@
 #define __DSHuman__DSArray__
 
 #include <stdio.h>
+#include <stdbool.h>
 
-#include "stdbool.h"
 #include "DSObject.h"
 
 
@@ -41,10 +41,10 @@ extern
 uint64_t DSArrayGetIndexOfObject(DSArray *array, void *object);
 
 extern
-void DSArrayGetObjectAtIndex(DSArray *array, uint64_t *index);
+void *DSArrayGetObjectAtIndex(DSArray *array, uint64_t index);
 
 extern
-void DSArrayRemoveObjectAtIndex(DSArray *array, uint64_t *index);
+void DSArrayRemoveObjectAtIndex(DSArray *array, uint64_t index);
 
 extern
 void DSArrayRemoveAllObjects(DSArray *array);

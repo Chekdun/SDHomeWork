@@ -14,12 +14,16 @@
 #include "DSObjectTest.h"
 #include "DSString.h"
 #include "DSStringTest.h"
+#include "DSArray.h"
+#include "DSArrayTest.h"
 
 int main() {
 
-//    DSStringTest();
-//    DSObjectCreationTest();
+    DSStringTest();
+    DSObjectCreationTest();
     DSHumanTest();
+    DSArrayBehaviourTest();
+    
     
     
     return 0;

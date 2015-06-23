@@ -56,8 +56,6 @@ void DSHumanSetMother(DSHuman *object, DSHuman *mother);
 static
 void DSHumanSetFather(DSHuman *object, DSHuman *father);
 
-
-
 #pragma mark -
 #pragma mark - Public Implementation
 
@@ -106,23 +104,23 @@ DSString *DSHumanGetName(DSHuman *ptrhuman) {
 }
 
 int DSHumanGetAge(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _age : 0;
+    return (NULL != ptrhuman) ? ptrhuman->_age : 0;
 }
 
 DSHumanGender DSHumanGetGender(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _sex : 0;
+    return (NULL != ptrhuman) ? ptrhuman->_sex : 0;
     }
 
 DSHuman *DSHumanGetPartner(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _partner : NULL;
+    return (NULL != ptrhuman) ? ptrhuman->_partner : NULL;
 }
 
 DSHuman *DSHumanGetMother(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _mother : 0;
+    return (NULL != ptrhuman) ? ptrhuman->_mother : 0;
 }
 
 DSHuman *DSHumanGetFather(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _father : 0;
+    return (NULL != ptrhuman) ? ptrhuman->_father : 0;
 }
 
 void DSHumanGenderOutput(DSHuman *human) {
@@ -196,18 +194,18 @@ void DSHumanAddChild(DSHuman *human, DSHuman *child) {
     }
 }
 
-//uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSHuman *child) {
-//    uint64_t result = kDSChildrenNotFound;
-//    if (NULL != object) {
-//        for (uint64_t index = 0; index < kDSChildrenCountMax; index++) {
-//            if (object->_children[index] == child) {
-//                result = index;
-//            }
-//        }
-//    }
-//    
-//    return result;
-//}
+uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSHuman *child) {
+    uint64_t result = kDSChildrenNotFound;
+    if (NULL != object) {
+        for (uint64_t index = 0; index < kDSChildrenCountMax; index++) {
+            if (object->_children[index] == child) {
+                result = index;
+            }
+        }
+    }
+    
+    return result;
+}
 
 void __DSHumanDeallocate(DSHuman *human) {
     DSHumanDivorse(human);
@@ -218,13 +216,6 @@ void __DSHumanDeallocate(DSHuman *human) {
 
 #pragma mark -
 #pragma mark - Privat Declaration
-
-
-void  DSHumanSetSex (DSHuman *human, DSHumanGender sex) {
-    if (NULL != human) {
-        human->_sex = sex;
-    }
-}
 
 void DSHumanSetName(DSHuman *object, DSString *name) {
     if (NULL != object && object->_name != name) {

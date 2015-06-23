@@ -72,4 +72,10 @@ void DSHumanGenderOutput(DSHuman *human);
 extern
 void DSHumanRemoveChild(DSHuman *object, DSHuman *child);
 
+extern
+uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSHuman *child);
+
+
+
+
 #endif /* defined(__DSHuman__DSHuman__) */
