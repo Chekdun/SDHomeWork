@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6B85701B3911BE003DDD6B /* DSLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */; };
+		AC6B85741B3911EE003DDD6B /* DSLinkedListTest.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B85721B3911EE003DDD6B /* DSLinkedListTest.c */; };
 		AC6C435C1B2C76FC003C6642 /* DSMacros.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6C435A1B2C76FC003C6642 /* DSMacros.c */; };
 		ACB32C581B1FFCC2002AC410 /* DSHumanTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */; };
 		ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5B1B208868002AC410 /* DSArrayTest.c */; };
@@ -43,6 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSLinkedList.c; path = DSLinkedList/DSLinkedList.c; sourceTree = "<group>"; };
+		AC6B856F1B3911BE003DDD6B /* DSLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSLinkedList.h; path = DSLinkedList/DSLinkedList.h; sourceTree = "<group>"; };
+		AC6B85721B3911EE003DDD6B /* DSLinkedListTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSLinkedListTest.c; path = TEST/DSLinkedListTest/DSLinkedListTest.c; sourceTree = "<group>"; };
+		AC6B85731B3911EE003DDD6B /* DSLinkedListTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSLinkedListTest.h; path = TEST/DSLinkedListTest/DSLinkedListTest.h; sourceTree = "<group>"; };
 		AC6C435A1B2C76FC003C6642 /* DSMacros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSMacros.c; path = TEST/DSMacros/DSMacros.c; sourceTree = "<group>"; };
 		AC6C435B1B2C76FC003C6642 /* DSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSMacros.h; path = TEST/DSMacros/DSMacros.h; sourceTree = "<group>"; };
 		ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DSHumanTest.c; sourceTree = "<group>"; };
@@ -89,6 +95,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC6B856D1B391178003DDD6B /* DSLinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */,
+				AC6B856F1B3911BE003DDD6B /* DSLinkedList.h */,
+			);
+			name = DSLinkedList;
+			sourceTree = "<group>";
+		};
+		AC6B85711B3911C8003DDD6B /* DSLinkedListTest */ = {
+			isa = PBXGroup;
+			children = (
+				AC6B85721B3911EE003DDD6B /* DSLinkedListTest.c */,
+				AC6B85731B3911EE003DDD6B /* DSLinkedListTest.h */,
+			);
+			name = DSLinkedListTest;
+			sourceTree = "<group>";
+		};
 		AC6C43591B2C76CD003C6642 /* DSMacros */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,11 +182,12 @@
 			isa = PBXGroup;
 			children = (
 				ACFCD2AE1B1442620024B342 /* Task.h */,
+				ACFCD29F1B143F7C0024B342 /* main.c */,
 				ACB32C591B20881A002AC410 /* DSArray */,
 				ACFCD2D31B1DDD890024B342 /* DSString */,
 				ACFCD2A71B143F8E0024B342 /* DSObject */,
 				ACFCD2A61B143F810024B342 /* DSHuman */,
-				ACFCD29F1B143F7C0024B342 /* main.c */,
+				AC6B856D1B391178003DDD6B /* DSLinkedList */,
 			);
 			path = DSHuman;
 			sourceTree = "<group>";
@@ -190,9 +215,10 @@
 			children = (
 				AC6C43591B2C76CD003C6642 /* DSMacros */,
 				ACB32C5A1B208846002AC410 /* DSArrayTest */,
+				ACFCD2D71B1DEE870024B342 /* DSStringTest */,
 				ACCD489D1B1EAD8800973BCE /* DSObjectTest */,
 				ACCD489C1B1EAD0400973BCE /* DSHumanTest */,
-				ACFCD2D71B1DEE870024B342 /* DSStringTest */,
+				AC6B85711B3911C8003DDD6B /* DSLinkedListTest */,
 			);
 			name = TEST;
 			path = DSHuman;
@@ -305,9 +331,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCD48A01B1EADC700973BCE /* DSObjectTest.c in Sources */,
+				AC6B85741B3911EE003DDD6B /* DSLinkedListTest.c in Sources */,
 				ACFCD2D61B1DDDA50024B342 /* DSString.c in Sources */,
 				ACFCD2DA1B1DEF030024B342 /* DSStringTest.c in Sources */,
 				ACFCD2AD1B143FEF0024B342 /* DSHuman.c in Sources */,
+				AC6B85701B3911BE003DDD6B /* DSLinkedList.c in Sources */,
 				ACFCD2A01B143F7C0024B342 /* main.c in Sources */,
 				ACFCD2BF1B1B02920024B342 /* DSBitOutput.c in Sources */,
 				ACFCD2AA1B143FD70024B342 /* DSObject.c in Sources */,

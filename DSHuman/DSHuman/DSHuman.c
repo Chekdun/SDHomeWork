@@ -42,7 +42,7 @@ uint64_t kDSChildrenCountMax = 20;
 #pragma mark - Privat Declaration
 
 static
-void  DSHumanSetSex (DSHuman *human, DSHumanGender sex);
+void  DSHumanSetSex(DSHuman *human, DSHumanGender sex);
 
 static
 void DSHumanSetName(DSHuman *object, DSString *name);

@@ -50,9 +50,8 @@ void *DSArrayCreateWithCapacity(uint64_t capacity) {
     
     return result;
 }
-void __DSArrayDiallocate(void *object) {
-    DSArrayRemoveAllObjects(object);             
-    //DSArraySetCapacity(object, 0);
+void __DSArrayDeallocate(void *object) {
+    DSArrayRemoveAllObjects(object);
     
     __DSObjectDeallocate(object);
 }
@@ -70,11 +69,12 @@ uint64_t DSArrayGetCount( DSArray *array) {
     return NULL != array ? array->_count : 0;
 }
 
+
 bool DSArrayContainsObject(DSArray *array, void *object) {
     return (NULL != array) && (kDSNotFound != DSArrayGetIndexOfObject(array, object));
 }
 
-uint64_t DSArrayGetIndexObject(DSArray *array, void *object) {
+uint64_t DSArrayGetIndexOfObject(DSArray *array, void *object) {
     if (NULL == array) {
         return 0;
     }
@@ -130,7 +130,7 @@ void DSArrayRemoveAllObjects(DSArray *array) {
             DSArraySetObjectAtIndex(array, NULL, index);
         }
         
-        DSArraySetCapacity(array, 0);
+        DSArraySetCount(array, 0);
     }
 }
 

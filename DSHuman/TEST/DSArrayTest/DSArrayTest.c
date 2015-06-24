@@ -77,7 +77,7 @@ void DSArrayOneObjectBehaviourTest(void) {
     assert(DSArrayGetObjectAtIndex(array, 0) == object);
     
     //      array must contain an object
-    assert(true == DSArrayContainsObect(array, object));
+    assert(true == DSArrayContainsObject(array, object));
     
     
     // after object was removed from array
@@ -96,7 +96,7 @@ void DSArrayOneObjectBehaviourTest(void) {
     assert(1 == DSObjectGetReferenceCount(object));
     
     //      array must not contain an object
-    assert(false == DSArrayContainsObect(array, object));
+    assert(false == DSArrayContainsObject(array, object));
     
     DSObjectRelease(object);
     DSObjectRelease(array);
@@ -131,8 +131,8 @@ void DSArrayMultipleObjectBehaviourTest(void) {
         assert(DSArrayGetObjectAtIndex(array, index) == orirginObject);
     }
     
-    //      added object2 must be at index 5
-    assert(DSArrayGetObjectAtIndex(array, 5) == orirginObject);
+    //      added object2 must be at index 4
+    assert(DSArrayGetObjectAtIndex(array, 4) == orirginObject);
     
     // after object at index 3 was removed
     DSArrayRemoveObjectAtIndex(array, 3);
@@ -141,7 +141,7 @@ void DSArrayMultipleObjectBehaviourTest(void) {
     assert(5 == DSArrayGetCount(array));
     
     //      objects at indices 0 - 3 must be equal to origin object
-    for (uint64_t index = 0; index < 5; index++) {
+    for (uint64_t index = 0; index < 4; index++) {
         assert(DSArrayGetObjectAtIndex(array, index) == orirginObject);
     }
     
@@ -155,8 +155,8 @@ void DSArrayMultipleObjectBehaviourTest(void) {
     assert(0 == DSArrayGetCount(array));
     
     //      array must no contain origin object ang object2
-    assert(false == DSArrayContainsObect(array, orirginObject));
-    assert(false == DSArrayContainsObect(array, object2));
+    assert(false == DSArrayContainsObject(array, orirginObject));
+    assert(false == DSArrayContainsObject(array, object2));
     
     DSObjectRelease(object2);
     DSObjectRelease(orirginObject);

@@ -35,7 +35,7 @@ extern
 uint64_t DSArrayGetCount(DSArray *array);
 
 extern
-bool DSArrayContainsObect(DSArray *array, void *object);
+bool DSArrayContainsObject(DSArray *array, void *object);
 
 extern
 uint64_t DSArrayGetIndexOfObject(DSArray *array, void *object);
