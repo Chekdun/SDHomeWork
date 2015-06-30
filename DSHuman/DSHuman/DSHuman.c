@@ -15,17 +15,13 @@
 #include "DSString.h"
 #include "DSMacros.h"
 
-
-
-
-
 struct DSHuman {
     DSObject _superObject;
     
     DSString *_name;
     int _age;
     DSHumanGender _sex;
-    DSHuman *_children[20];
+    DSArray *_children;
     DSHuman *_partner;
     DSHuman *_mother;
     DSHuman *_father;
@@ -40,9 +36,6 @@ uint64_t kDSChildrenCountMax = 20;
 
 #pragma mark -
 #pragma mark - Privat Declaration
-
-static
-void  DSHumanSetSex(DSHuman *human, DSHumanGender sex);
 
 static
 void DSHumanSetName(DSHuman *object, DSString *name);
@@ -168,24 +161,24 @@ void DSHumanRemoveChild(DSHuman *object, DSHuman *child) {
     }
 }
 
-DSHuman *DSHumanGetChildren(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _children[0] : NULL;
+DSArray *DSHumanGetChildren(DSHuman *ptrhuman) {
+    return (NULL != ptrhuman) ? ptrhuman->_children : NULL;
 }
 
 int DSHumanGetChildrenCount(DSHuman *ptrhuman) {
-    return (NULL != ptrhuman) ? ptrhuman -> _childrenCount : 0;
+    return NULL != ptrhuman ? ptrhuman->_childrenCount : NULL;
 }
 
 void DSHumanAddChild(DSHuman *human, DSHuman *child) {
     if (NULL != human) {
         for (int index = 0; index < 20; index++) {
-            if (human->_children[index] == NULL) {
-                DSHuman *previousChild = human->_children[index];
+            if (human->_children == NULL) {
+                DSHuman *previousChild = human->_children;
                 if (previousChild != child) {
                     DSObjectRetain(child);
                     DSObjectRelease(previousChild);
                     
-                    human->_children[index] = child;
+                    human->_children = child;
                     human->_childrenCount++;
                 }
                 break;
@@ -194,11 +187,11 @@ void DSHumanAddChild(DSHuman *human, DSHuman *child) {
     }
 }
 
-uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSHuman *child) {
+uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSArray *child) {
     uint64_t result = kDSChildrenNotFound;
     if (NULL != object) {
         for (uint64_t index = 0; index < kDSChildrenCountMax; index++) {
-            if (object->_children[index] == child) {
+            if (object->_children == child) {
                 result = index;
             }
         }

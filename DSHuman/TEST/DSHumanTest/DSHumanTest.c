@@ -32,11 +32,10 @@ void DSHumanTest(void) {
     assert(DSHumanGetPartner(anastasya) == andrey);
     assert(DSHumanGetPartner(andrey) == anastasya);
     
-    
     assert(DSObjectGetReferenceCount(andrey) == 2);
     assert(DSObjectGetReferenceCount(anastasya) == 1);
     
-    //  divorce anasatasye
+//  divorce anasatasye
     DSHumanDivorse(anastasya);
     
     assert(DSObjectGetReferenceCount(anastasya) == 1);
@@ -56,9 +55,6 @@ void DSHumanTest(void) {
     DSHumanRemoveChild(anastasya, timo);
     
     assert(DSObjectGetReferenceCount(timo) == 1);
-    
- 
-    
     
 //  kill all
     DSObjectRelease(anastasya);

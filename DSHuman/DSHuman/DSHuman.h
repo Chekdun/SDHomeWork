@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 #include "DSString.h"
+#include "DSArray.h"
 
 typedef enum {
     DSHumanUndefined,
@@ -46,7 +47,7 @@ extern
 DSHumanGender DSHumanGetGender(DSHuman *ptrhuman);
 
 extern
-DSHuman *DSHumanGetChildren(DSHuman *ptrhuman);
+DSArray *DSHumanGetChildren(DSHuman *ptrhuman);
 
 extern
 DSHuman *DSHumanGetPartner(DSHuman *ptrhuman);
@@ -73,7 +74,7 @@ extern
 void DSHumanRemoveChild(DSHuman *object, DSHuman *child);
 
 extern
-uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSHuman *child);
+uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSArray *child);
 
 
 
