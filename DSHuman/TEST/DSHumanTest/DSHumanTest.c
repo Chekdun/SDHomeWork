@@ -37,13 +37,13 @@ void DSHumanTest(void) {
     
 //  divorce anasatasye
     DSHumanDivorse(anastasya);
-    
-    assert(DSObjectGetReferenceCount(anastasya) == 1);
-    assert(DSObjectGetReferenceCount(andrey) == 1);
-    
-    assert(DSHumanGetPartner(anastasya) == NULL);
-    assert(DSHumanGetPartner(andrey) == NULL);
-    
+ 
+    DSHuman	*humans[2]	 = {anastasya, andrey};
+    for (uint index = 0; index < 2; index++) {
+        assert(DSObjectGetReferenceCount(humans[index]) == 1);
+        assert(DSHumanGetPartner(humans[index]) == NULL);
+    }
+   
 //  create child
     DSHuman *timo = DSHumanCreateChild(anastasya, andrey, DSHumanMale, "Timo");
 

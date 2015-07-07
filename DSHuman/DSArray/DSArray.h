@@ -14,7 +14,6 @@
 
 #include "DSObject.h"
 
-
 static const uint64_t kDSNotFound = UINT64_MAX;
 
 typedef struct {
@@ -24,6 +23,8 @@ typedef struct {
     uint64_t _count;
     uint64_t _capacity;
 } DSArray;
+
+
 
 extern
 void *DSArrayCreateWithCapacity(uint64_t capacity);

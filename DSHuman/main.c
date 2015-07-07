@@ -19,11 +19,11 @@
 
 int main() {
 
-    DSStringTest();
-    DSObjectCreationTest();
-    DSHumanTest();
-    DSArrayBehaviourTest();
-    
+//    DSStringTest();
+//    DSObjectCreationTest();
+//    DSHumanTest();
+//    DSArrayBehaviourTest();
+
     
     
     return 0;

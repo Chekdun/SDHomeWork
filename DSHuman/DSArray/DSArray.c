@@ -14,8 +14,6 @@
 
 static const uint64_t kDSArrayMaximumCapacity = UINT64_MAX - 1;
 
-
-
 #pragma mark -
 #pragma mark - privat declaration
 

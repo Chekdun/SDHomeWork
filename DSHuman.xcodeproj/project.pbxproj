@@ -17,8 +17,6 @@
 		ACFCD2A01B143F7C0024B342 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD29F1B143F7C0024B342 /* main.c */; };
 		ACFCD2AA1B143FD70024B342 /* DSObject.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2A81B143FD70024B342 /* DSObject.c */; };
 		ACFCD2AD1B143FEF0024B342 /* DSHuman.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2AB1B143FEF0024B342 /* DSHuman.c */; };
-		ACFCD2BC1B1AF4320024B342 /* DSStructures.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2BA1B1AF4320024B342 /* DSStructures.c */; };
-		ACFCD2BF1B1B02920024B342 /* DSBitOutput.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2BD1B1B02920024B342 /* DSBitOutput.c */; };
 		ACFCD2D61B1DDDA50024B342 /* DSString.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2D41B1DDDA50024B342 /* DSString.c */; };
 		ACFCD2DA1B1DEF030024B342 /* DSStringTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2D81B1DEF030024B342 /* DSStringTest.c */; };
 /* End PBXBuildFile section */
@@ -59,6 +57,7 @@
 		ACB32C5F1B208880002AC410 /* DSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSArray.h; path = DSArray/DSArray.h; sourceTree = "<group>"; };
 		ACCD489E1B1EADC700973BCE /* DSObjectTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSObjectTest.c; path = TEST/DSObjectTest/DSObjectTest.c; sourceTree = "<group>"; };
 		ACCD489F1B1EADC700973BCE /* DSObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSObjectTest.h; path = TEST/DSObjectTest/DSObjectTest.h; sourceTree = "<group>"; };
+		ACF62B981B4ACFEF00A6C9D2 /* StudyPlan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyPlan.h; sourceTree = "<group>"; };
 		ACFCD29C1B143F7C0024B342 /* DSHuman */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSHuman; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCD29F1B143F7C0024B342 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		ACFCD2A81B143FD70024B342 /* DSObject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSObject.c; path = DSObject/DSObject.c; sourceTree = "<group>"; };
@@ -66,10 +65,6 @@
 		ACFCD2AB1B143FEF0024B342 /* DSHuman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSHuman.c; path = DSHuman/DSHuman.c; sourceTree = "<group>"; };
 		ACFCD2AC1B143FEF0024B342 /* DSHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSHuman.h; path = DSHuman/DSHuman.h; sourceTree = "<group>"; };
 		ACFCD2AE1B1442620024B342 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		ACFCD2BA1B1AF4320024B342 /* DSStructures.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSStructures.c; path = DSStructures/DSStructures.c; sourceTree = "<group>"; };
-		ACFCD2BB1B1AF4320024B342 /* DSStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSStructures.h; path = DSStructures/DSStructures.h; sourceTree = "<group>"; };
-		ACFCD2BD1B1B02920024B342 /* DSBitOutput.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSBitOutput.c; path = DSBitOutput/DSBitOutput.c; sourceTree = "<group>"; };
-		ACFCD2BE1B1B02920024B342 /* DSBitOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSBitOutput.h; path = DSBitOutput/DSBitOutput.h; sourceTree = "<group>"; };
 		ACFCD2C41B1C7D7F0024B342 /* DSTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCD2D41B1DDDA50024B342 /* DSString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSString.c; path = DSString/DSString.c; sourceTree = "<group>"; };
 		ACFCD2D51B1DDDA50024B342 /* DSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSString.h; path = DSString/DSString.h; sourceTree = "<group>"; };
@@ -162,10 +157,10 @@
 		ACFCD2931B143F7C0024B342 = {
 			isa = PBXGroup;
 			children = (
+				ACF62B981B4ACFEF00A6C9D2 /* StudyPlan.h */,
 				ACFCD29E1B143F7C0024B342 /* DSHuman */,
 				ACFCD2B21B15F7660024B342 /* TEST */,
 				ACFCD29D1B143F7C0024B342 /* Products */,
-				ACFCD2B61B1A2A230024B342 /* trash */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,17 +217,6 @@
 			);
 			name = TEST;
 			path = DSHuman;
-			sourceTree = "<group>";
-		};
-		ACFCD2B61B1A2A230024B342 /* trash */ = {
-			isa = PBXGroup;
-			children = (
-				ACFCD2BA1B1AF4320024B342 /* DSStructures.c */,
-				ACFCD2BB1B1AF4320024B342 /* DSStructures.h */,
-				ACFCD2BD1B1B02920024B342 /* DSBitOutput.c */,
-				ACFCD2BE1B1B02920024B342 /* DSBitOutput.h */,
-			);
-			name = trash;
 			sourceTree = "<group>";
 		};
 		ACFCD2D31B1DDD890024B342 /* DSString */ = {
@@ -337,12 +321,10 @@
 				ACFCD2AD1B143FEF0024B342 /* DSHuman.c in Sources */,
 				AC6B85701B3911BE003DDD6B /* DSLinkedList.c in Sources */,
 				ACFCD2A01B143F7C0024B342 /* main.c in Sources */,
-				ACFCD2BF1B1B02920024B342 /* DSBitOutput.c in Sources */,
 				ACFCD2AA1B143FD70024B342 /* DSObject.c in Sources */,
 				ACB32C581B1FFCC2002AC410 /* DSHumanTest.c in Sources */,
 				ACB32C601B208880002AC410 /* DSArray.c in Sources */,
 				ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */,
-				ACFCD2BC1B1AF4320024B342 /* DSStructures.c in Sources */,
 				AC6C435C1B2C76FC003C6642 /* DSMacros.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

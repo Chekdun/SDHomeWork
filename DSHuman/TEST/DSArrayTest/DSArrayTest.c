@@ -146,7 +146,7 @@ void DSArrayMultipleObjectBehaviourTest(void) {
     }
     
     //      added object2 must be at index 4
-    assert(DSArrayGetObjectAtIndex(array, 4));
+    assert(object2 == DSArrayGetObjectAtIndex(array, 4));
     
     // after removing all object from array
     DSArrayRemoveAllObjects(array);
