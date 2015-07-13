@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B7D1B52C41600B9CD21 /* DSOrganism.m */; };
+		AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B801B52C65900B9CD21 /* DSOrganismTest.m */; };
+		AC69870E1B4D105D006D054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC69870D1B4D105D006D054D /* main.m */; };
 		AC6B85701B3911BE003DDD6B /* DSLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */; };
 		AC6B85741B3911EE003DDD6B /* DSLinkedListTest.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B85721B3911EE003DDD6B /* DSLinkedListTest.c */; };
 		AC6C435C1B2C76FC003C6642 /* DSMacros.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6C435A1B2C76FC003C6642 /* DSMacros.c */; };
@@ -22,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		AC6987091B4D105D006D054D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		ACFCD29A1B143F7C0024B342 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,6 +55,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC219B7C1B52C41600B9CD21 /* DSOrganism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSOrganism.h; sourceTree = "<group>"; };
+		AC219B7D1B52C41600B9CD21 /* DSOrganism.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSOrganism.m; sourceTree = "<group>"; };
+		AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSOrganismTest.h; sourceTree = "<group>"; };
+		AC219B801B52C65900B9CD21 /* DSOrganismTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSOrganismTest.m; sourceTree = "<group>"; };
+		AC69870B1B4D105D006D054D /* DSObjective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DSObjective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC69870D1B4D105D006D054D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSLinkedList.c; path = DSLinkedList/DSLinkedList.c; sourceTree = "<group>"; };
 		AC6B856F1B3911BE003DDD6B /* DSLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSLinkedList.h; path = DSLinkedList/DSLinkedList.h; sourceTree = "<group>"; };
 		AC6B85721B3911EE003DDD6B /* DSLinkedListTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSLinkedListTest.c; path = TEST/DSLinkedListTest/DSLinkedListTest.c; sourceTree = "<group>"; };
@@ -73,6 +91,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AC6987081B4D105D006D054D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACFCD2991B143F7C0024B342 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,6 +115,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC69870C1B4D105D006D054D /* DSObjective-C */ = {
+			isa = PBXGroup;
+			children = (
+				AC69870D1B4D105D006D054D /* main.m */,
+				AC6987121B4D1075006D054D /* Source */,
+				AC6987131B4D109F006D054D /* Test */,
+			);
+			path = "DSObjective-C";
+			sourceTree = "<group>";
+		};
+		AC6987121B4D1075006D054D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AC219B7C1B52C41600B9CD21 /* DSOrganism.h */,
+				AC219B7D1B52C41600B9CD21 /* DSOrganism.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AC6987131B4D109F006D054D /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */,
+				AC219B801B52C65900B9CD21 /* DSOrganismTest.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		AC6B856D1B391178003DDD6B /* DSLinkedList */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +213,7 @@
 				ACF62B981B4ACFEF00A6C9D2 /* StudyPlan.h */,
 				ACFCD29E1B143F7C0024B342 /* DSHuman */,
 				ACFCD2B21B15F7660024B342 /* TEST */,
+				AC69870C1B4D105D006D054D /* DSObjective-C */,
 				ACFCD29D1B143F7C0024B342 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -169,6 +223,7 @@
 			children = (
 				ACFCD29C1B143F7C0024B342 /* DSHuman */,
 				ACFCD2C41B1C7D7F0024B342 /* DSTest */,
+				AC69870B1B4D105D006D054D /* DSObjective-C */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,6 +295,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AC69870A1B4D105D006D054D /* DSObjective-C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6987111B4D105D006D054D /* Build configuration list for PBXNativeTarget "DSObjective-C" */;
+			buildPhases = (
+				AC6987071B4D105D006D054D /* Sources */,
+				AC6987081B4D105D006D054D /* Frameworks */,
+				AC6987091B4D105D006D054D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DSObjective-C";
+			productName = "DSObjective-C";
+			productReference = AC69870B1B4D105D006D054D /* DSObjective-C */;
+			productType = "com.apple.product-type.tool";
+		};
 		ACFCD29B1B143F7C0024B342 /* DSHuman */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACFCD2A31B143F7C0024B342 /* Build configuration list for PBXNativeTarget "DSHuman" */;
@@ -283,6 +355,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = DenisSidorov;
 				TargetAttributes = {
+					AC69870A1B4D105D006D054D = {
+						CreatedOnToolsVersion = 6.4;
+					};
 					ACFCD29B1B143F7C0024B342 = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
@@ -305,11 +380,22 @@
 			targets = (
 				ACFCD29B1B143F7C0024B342 /* DSHuman */,
 				ACFCD2C31B1C7D7F0024B342 /* DSTest */,
+				AC69870A1B4D105D006D054D /* DSObjective-C */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AC6987071B4D105D006D054D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC69870E1B4D105D006D054D /* main.m in Sources */,
+				AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */,
+				AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACFCD2981B143F7C0024B342 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,6 +425,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		AC69870F1B4D105D006D054D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC6987101B4D105D006D054D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		ACFCD2A11B143F7C0024B342 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -419,6 +523,7 @@
 		ACFCD2A41B143F7C0024B342 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -426,6 +531,7 @@
 		ACFCD2A51B143F7C0024B342 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -451,6 +557,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AC6987111B4D105D006D054D /* Build configuration list for PBXNativeTarget "DSObjective-C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC69870F1B4D105D006D054D /* Debug */,
+				AC6987101B4D105D006D054D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ACFCD2971B143F7C0024B342 /* Build configuration list for PBXProject "DSHuman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

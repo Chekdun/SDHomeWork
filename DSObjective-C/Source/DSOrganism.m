@@ -1,8 +1,8 @@
 //
-//  DSOrganismTest.m
-//  DSHuman
+//  DSOrganism.m
+//  DSObjective-C
 //
-//  Created by Denis Sidorov on 12.07.15.
+//  Created by Denis Sidorov on 07.07.15.
 //  Copyright (c) 2015 DenisSidorov. All rights reserved.
 //
 //Задание 1.
@@ -14,28 +14,71 @@
 //3. В цикле пройти по массиву существ и проверить их пол. Если мужик, то надо отправить существо воевать, если баба, то рожать детей;
 //4. У существа наружу должен быть немутабельный массив детей через динамическое проперти с копи+авторелиз, а внутри - еще и мутабельное свойство.
 
-#import "DSOrganismTest.h"
 #import "DSOrganism.h"
 
-@implementation DSOrganismTest
+@interface DSOrganism ()
+@property (nonatomic, retain) NSMutableArray *mutableChildren;
 
-+ (void) organismTest {
-// create  2 organism
-    DSOrganism *newOrganism1 = [[DSOrganism alloc] initWithName:@"John"
-                                                         gender:kDSOrganismGenderMale
-                                                            age:25
-                                                         weight:180];
-    
-    NSLog(@"\n name = %@\n, gender = %u\n, age = %hhu\n, weight = %hhu\n", newOrganism1.name, newOrganism1.gender, newOrganism1.age, newOrganism1.weight);
-    assert(nil != newOrganism1);
-    
-    DSOrganism *newOrganism2 = [[DSOrganism alloc] initWithName:@"July"
-                                                         gender:kDSOrganismGenderFemale
-                                                            age:24
-                                                         weight:170];
-    
-    NSLog(@"\n name = %@\n, gender = %u\n, age = %hhu\n, weight = %hhu\n", newOrganism2.name, newOrganism2.gender, newOrganism2.age, newOrganism2.weight);
-    assert(nil != newOrganism2);
-
-}
 @end
+
+@implementation DSOrganism
+
+@dynamic children;
+
+- (void) dialloc {
+    self.name = nil;
+    self.mutableChildren = nil;
+}
+
+- (instancetype) initWithName:(NSString *)name
+                       gender:(DSOrganismGender)gender
+                          age:(uint8_t)age
+                       weight:(uint8_t)weight
+{
+    self = [super init];
+    if (self) {
+        self.name = name;
+        self.gender = gender;
+        self.age = age;
+        self.weight = weight;
+        self.mutableChildren = [NSMutableArray array];
+    }
+    return self;
+}
+
+- (void)fight {
+    NSLog(@" I must FIGHT, I must KILL");
+}
+
+- (void)giveBirthChild {
+    NSLog(@" Now I will give birth to child");
+}
+
+- (void)addChild:(DSOrganism *)child {
+    if (nil != child) {
+        [self.mutableChildren addObject:child];
+    }
+}
+
+- (void)removeChild:(DSOrganism *)child {
+    if (nil != child) {
+        [self.mutableChildren removeObject:child];
+    }
+}
+
+- (void)sayHello {
+    NSLog(@"Hello!");
+    
+    for (DSOrganism *child in self.mutableChildren) {
+        [child sayHello];
+    }
+}
+
+
+
+@end
+
+
+
+
+
