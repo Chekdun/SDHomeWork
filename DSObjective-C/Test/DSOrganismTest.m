@@ -18,24 +18,35 @@
 #import "DSOrganism.h"
 
 @implementation DSOrganismTest
-
 + (void) organismTest {
-// create  2 organism
-    DSOrganism *newOrganism1 = [[DSOrganism alloc] initWithName:@"John"
-                                                         gender:kDSOrganismGenderMale
-                                                            age:25
-                                                         weight:180];
+    DSOrganism *male = [[DSOrganism alloc] initWithGender:kDSOrganismGenderMale];
+    DSOrganism *female = [[DSOrganism alloc] initWithGender:kDSOrganismGenderFemale];
     
-    NSLog(@"\n name = %@\n, gender = %u\n, age = %hhu\n, weight = %hhu\n", newOrganism1.name, newOrganism1.gender, newOrganism1.age, newOrganism1.weight);
-    assert(nil != newOrganism1);
+    male.name = @"MaleName";
+    female.name = @"FemaleName";
     
-    DSOrganism *newOrganism2 = [[DSOrganism alloc] initWithName:@"July"
-                                                         gender:kDSOrganismGenderFemale
-                                                            age:24
-                                                         weight:170];
+    for (NSUInteger i = 0; i < 10; i++) {
+        DSOrganism *child = [female giveBirth];
+        child.name = [NSString stringWithFormat:@"child%ld", i];
+        
+        [male addChild:child];
+        [female addChild:child];
+    }
     
-    NSLog(@"\n name = %@\n, gender = %u\n, age = %hhu\n, weight = %hhu\n", newOrganism2.name, newOrganism2.gender, newOrganism2.age, newOrganism2.weight);
-    assert(nil != newOrganism2);
-
+    NSLog(@"\n%@ %@", male, male.children);
+    NSLog(@"\n%@ %@", female, female.children);
+    
+    [male sayHello];
+    [female sayHello];
+    
+    for (DSOrganism *being in male.children) {
+        if (kDSOrganismGenderMale == being.gender) {
+            [being fight];
+        }
+        if (kDSOrganismGenderFemale == being.gender) {
+            [being giveBirth];
+        }
+    }
 }
+
 @end

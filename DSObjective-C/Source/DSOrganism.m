@@ -17,7 +17,9 @@
 #import "DSOrganism.h"
 
 @interface DSOrganism ()
-@property (nonatomic, retain) NSMutableArray *mutableChildren;
+
+@property (nonatomic, retain) NSMutableArray    *mutableChildren;
+@property (nonatomic, assign) DSOrganismGender  gender;
 
 @end
 
@@ -25,60 +27,76 @@
 
 @dynamic children;
 
-- (void) dialloc {
+#pragma mark -
+#pragma mark Initializations and Deallocations
+
+- (void)dealloc {
     self.name = nil;
     self.mutableChildren = nil;
 }
 
-- (instancetype) initWithName:(NSString *)name
-                       gender:(DSOrganismGender)gender
-                          age:(uint8_t)age
-                       weight:(uint8_t)weight
-{
+- (instancetype)init {
+    return [self initWithGender:kDSOrganismGenderUndefine];
+}
+
+- (instancetype)initWithGender:(DSOrganismGender)gender {
     self = [super init];
+    
     if (self) {
-        self.name = name;
+        self.mutableChildren = [[NSMutableArray alloc] init];
         self.gender = gender;
-        self.age = age;
-        self.weight = weight;
-        self.mutableChildren = [NSMutableArray array];
     }
+    
     return self;
 }
 
+#pragma mark -
+#pragma mark Accessor
+
+- (NSArray *)children {
+    return [self.mutableChildren copy];
+ }
+            
+- (NSString *)description {
+        return [NSString stringWithFormat:@"%@, name: %@, gender: %u, age: %hhu; children: %@", [super description],
+                self.name, self.gender, self.age, self.children];
+    }
+
+#pragma mark -
+#pragma mark public
+
 - (void)fight {
-    NSLog(@" I must FIGHT, I must KILL");
+    if (kDSOrganismGenderMale == self.gender) {
+        NSLog(@"I am %@ going to WAR", self.name);
+    } else {
+        NSLog(@"I am civilian");
+    }
 }
 
-- (void)giveBirthChild {
-    NSLog(@" Now I will give birth to child");
+- (void)sayHello {
+    NSLog(@"Hello, my name is %@ and I am %u", self.name, self.gender);
+    NSLog(@"Children say hello:");
+    
+    for (DSOrganism *organism in self.mutableChildren) {
+        [organism sayHello];
+    }
+}
+
+- (instancetype)giveBirth {
+    DSOrganismGender randomGender = (arc4random() % 2) + 1;
+    
+    return [[[self class] alloc] initWithGender:randomGender];
 }
 
 - (void)addChild:(DSOrganism *)child {
-    if (nil != child) {
+    if (child != nil) {
         [self.mutableChildren addObject:child];
     }
 }
 
 - (void)removeChild:(DSOrganism *)child {
-    if (nil != child) {
-        [self.mutableChildren removeObject:child];
-    }
+    [self.mutableChildren removeObject:child];
 }
-
-- (void)sayHello {
-    NSLog(@"Hello!");
-    
-    for (DSOrganism *child in self.mutableChildren) {
-        [child sayHello];
-    }
-}
-
-
 
 @end
-
-
-
-
 

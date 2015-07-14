@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DSOrganismTest.h"
+#import "DSOrganism.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
         [DSOrganismTest organismTest];
-
         }
     
     return 0;

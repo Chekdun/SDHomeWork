@@ -18,28 +18,29 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    kDSOrganismGenderMale = 1,
-    kDSOrganismGenderFemale = 2
-} DSOrganismGender;
+    kDSOrganismGenderUndefine,
+    kDSOrganismGenderMale,
+    kDSOrganismGenderFemale
+}DSOrganismGender;
 
 @interface DSOrganism : NSObject
 
-- (instancetype) initWithName:(NSString *)name
-                       gender:(DSOrganismGender)gender
-                          age:(uint8_t)age
-                       weight:(uint8_t)weight;
+@property (nonatomic, copy)             NSString            *name;
+@property (nonatomic, copy, readonly)   NSArray             *children;
+@property (nonatomic, assign, readonly) DSOrganismGender    gender;
+@property (nonatomic, assign, readonly) uint8_t             age;
+@property (nonatomic, assign, readonly) uint8_t             weight;
 
+- (instancetype)initWithGender:(DSOrganismGender)gender;
 
-@property (nonatomic, copy)     NSString *name;
-@property (nonatomic, retain)   NSMutableArray *children;
-@property (nonatomic, assign)   DSOrganismGender gender;
-@property (nonatomic, assign)   uint8_t age;
-@property (nonatomic, assign)   uint8_t weight;
+- (void)fight;
 
-- (void) fight;
-- (void) giveBirthChild;
-- (void) addChild:(DSOrganism *)child;
-- (void) removeChild:(DSOrganism *)child;
-- (void) sayHello;
+- (void)sayHello;
+
+- (DSOrganism *)giveBirth;
+
+- (void)addChild:(DSOrganism *) child;
+
+- (void)removeChild:(DSOrganism *) child;
 
 @end
