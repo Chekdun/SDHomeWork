@@ -25,6 +25,7 @@
     male.name = @"MaleName";
     female.name = @"FemaleName";
     
+    
     for (NSUInteger i = 0; i < 10; i++) {
         DSOrganism *child = [female giveBirth];
         child.name = [NSString stringWithFormat:@"child%ld", i];
@@ -33,8 +34,8 @@
         [female addChild:child];
     }
     
-    NSLog(@"\n%@ %@", male, male.children);
-    NSLog(@"\n%@ %@", female, female.children);
+    NSLog(@"\n%@\n ", male);
+    NSLog(@"\n%@ ", female);
     
     [male sayHello];
     [female sayHello];
@@ -47,6 +48,7 @@
             [being giveBirth];
         }
     }
+    
 }
 
 @end

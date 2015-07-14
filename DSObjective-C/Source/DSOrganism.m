@@ -33,6 +33,8 @@
 - (void)dealloc {
     self.name = nil;
     self.mutableChildren = nil;
+    
+    [super dealloc];
 }
 
 - (instancetype)init {
@@ -43,7 +45,7 @@
     self = [super init];
     
     if (self) {
-        self.mutableChildren = [[NSMutableArray alloc] init];
+        self.mutableChildren = [NSMutableArray array];
         self.gender = gender;
     }
     
@@ -54,12 +56,16 @@
 #pragma mark Accessor
 
 - (NSArray *)children {
-    return [self.mutableChildren copy];
+    return [[self.mutableChildren copy] autorelease];
  }
             
 - (NSString *)description {
-        return [NSString stringWithFormat:@"%@, name: %@, gender: %u, age: %hhu; children: %@", [super description],
-                self.name, self.gender, self.age, self.children];
+        return [NSString stringWithFormat:@"%@, name: %@, gender: %u, age: %hhu; children: %@",
+                [super description],
+                self.name,
+                self.gender,
+                self.age,
+                self.children];
     }
 
 #pragma mark -
@@ -75,21 +81,26 @@
 
 - (void)sayHello {
     NSLog(@"Hello, my name is %@ and I am %u", self.name, self.gender);
-    NSLog(@"Children say hello:");
-    
+    NSArray *children = self.children;
+
+    if ([children count]) {
+        NSLog(@"Children say hello:");
     for (DSOrganism *organism in self.mutableChildren) {
         [organism sayHello];
+        }
     }
 }
 
 - (instancetype)giveBirth {
-    DSOrganismGender randomGender = (arc4random() % 2) + 1;
-    
-    return [[[self class] alloc] initWithGender:randomGender];
+    if (kDSOrganismGenderFemale) {
+        DSOrganismGender randomGender = arc4random_uniform(2) + 1;
+
+    return [[[[self class] alloc] initWithGender:randomGender] autorelease];
+    }
 }
 
 - (void)addChild:(DSOrganism *)child {
-    if (child != nil) {
+    if (child != nil && NO ==[self.mutableChildren containsObject:child]) {
         [self.mutableChildren addObject:child];
     }
 }

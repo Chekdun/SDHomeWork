@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B7D1B52C41600B9CD21 /* DSOrganism.m */; };
 		AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B801B52C65900B9CD21 /* DSOrganismTest.m */; };
+		AC3308301B5526BC00BDBBDA /* DSObjCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC33082F1B5526BC00BDBBDA /* DSObjCTest.m */; };
 		AC69870E1B4D105D006D054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC69870D1B4D105D006D054D /* main.m */; };
 		AC6B85701B3911BE003DDD6B /* DSLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */; };
 		AC6B85741B3911EE003DDD6B /* DSLinkedListTest.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B85721B3911EE003DDD6B /* DSLinkedListTest.c */; };
@@ -59,6 +60,7 @@
 		AC219B7D1B52C41600B9CD21 /* DSOrganism.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSOrganism.m; sourceTree = "<group>"; };
 		AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSOrganismTest.h; sourceTree = "<group>"; };
 		AC219B801B52C65900B9CD21 /* DSOrganismTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSOrganismTest.m; sourceTree = "<group>"; };
+		AC33082F1B5526BC00BDBBDA /* DSObjCTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSObjCTest.m; sourceTree = "<group>"; };
 		AC69870B1B4D105D006D054D /* DSObjective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DSObjective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC69870D1B4D105D006D054D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSLinkedList.c; path = DSLinkedList/DSLinkedList.c; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				AC69870D1B4D105D006D054D /* main.m */,
 				AC6987121B4D1075006D054D /* Source */,
 				AC6987131B4D109F006D054D /* Test */,
+				AC33082F1B5526BC00BDBBDA /* DSObjCTest.m */,
 			);
 			path = "DSObjective-C";
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3308301B5526BC00BDBBDA /* DSObjCTest.m in Sources */,
 				AC69870E1B4D105D006D054D /* main.m in Sources */,
 				AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */,
 				AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */,
@@ -428,6 +432,7 @@
 		AC69870F1B4D105D006D054D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -439,6 +444,7 @@
 		AC6987101B4D105D006D054D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
