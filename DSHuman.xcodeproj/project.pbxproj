@@ -10,10 +10,14 @@
 		AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B7D1B52C41600B9CD21 /* DSOrganism.m */; };
 		AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B801B52C65900B9CD21 /* DSOrganismTest.m */; };
 		AC3308301B5526BC00BDBBDA /* DSObjCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC33082F1B5526BC00BDBBDA /* DSObjCTest.m */; };
+		AC33083B1B5543A100BDBBDA /* DSOrganismFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = AC33083A1B5543A100BDBBDA /* DSOrganismFemale.m */; };
+		AC33083E1B5543D000BDBBDA /* DSOrganismMale.m in Sources */ = {isa = PBXBuildFile; fileRef = AC33083D1B5543D000BDBBDA /* DSOrganismMale.m */; };
 		AC69870E1B4D105D006D054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC69870D1B4D105D006D054D /* main.m */; };
 		AC6B85701B3911BE003DDD6B /* DSLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */; };
 		AC6B85741B3911EE003DDD6B /* DSLinkedListTest.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6B85721B3911EE003DDD6B /* DSLinkedListTest.c */; };
 		AC6C435C1B2C76FC003C6642 /* DSMacros.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6C435A1B2C76FC003C6642 /* DSMacros.c */; };
+		AC70840A1B55A67A00E31B45 /* NSObject+DSExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7084091B55A67A00E31B45 /* NSObject+DSExtensions.m */; };
+		AC70840D1B56150100E31B45 /* DSExtensionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70840C1B56150100E31B45 /* DSExtensionsTest.m */; };
 		ACB32C581B1FFCC2002AC410 /* DSHumanTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */; };
 		ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5B1B208868002AC410 /* DSArrayTest.c */; };
 		ACB32C601B208880002AC410 /* DSArray.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5E1B208880002AC410 /* DSArray.c */; };
@@ -61,6 +65,10 @@
 		AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSOrganismTest.h; sourceTree = "<group>"; };
 		AC219B801B52C65900B9CD21 /* DSOrganismTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSOrganismTest.m; sourceTree = "<group>"; };
 		AC33082F1B5526BC00BDBBDA /* DSObjCTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSObjCTest.m; sourceTree = "<group>"; };
+		AC3308391B5543A100BDBBDA /* DSOrganismFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSOrganismFemale.h; path = DSOrganismFemale/DSOrganismFemale.h; sourceTree = "<group>"; };
+		AC33083A1B5543A100BDBBDA /* DSOrganismFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSOrganismFemale.m; path = DSOrganismFemale/DSOrganismFemale.m; sourceTree = "<group>"; };
+		AC33083C1B5543D000BDBBDA /* DSOrganismMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSOrganismMale.h; path = DSOrganismMale/DSOrganismMale.h; sourceTree = "<group>"; };
+		AC33083D1B5543D000BDBBDA /* DSOrganismMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSOrganismMale.m; path = DSOrganismMale/DSOrganismMale.m; sourceTree = "<group>"; };
 		AC69870B1B4D105D006D054D /* DSObjective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DSObjective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC69870D1B4D105D006D054D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC6B856E1B3911BE003DDD6B /* DSLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSLinkedList.c; path = DSLinkedList/DSLinkedList.c; sourceTree = "<group>"; };
@@ -69,6 +77,10 @@
 		AC6B85731B3911EE003DDD6B /* DSLinkedListTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSLinkedListTest.h; path = TEST/DSLinkedListTest/DSLinkedListTest.h; sourceTree = "<group>"; };
 		AC6C435A1B2C76FC003C6642 /* DSMacros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSMacros.c; path = TEST/DSMacros/DSMacros.c; sourceTree = "<group>"; };
 		AC6C435B1B2C76FC003C6642 /* DSMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSMacros.h; path = TEST/DSMacros/DSMacros.h; sourceTree = "<group>"; };
+		AC7084081B55A67A00E31B45 /* NSObject+DSExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DSExtensions.h"; path = "DSExtensions/NSObject+DSExtensions.h"; sourceTree = "<group>"; };
+		AC7084091B55A67A00E31B45 /* NSObject+DSExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DSExtensions.m"; path = "DSExtensions/NSObject+DSExtensions.m"; sourceTree = "<group>"; };
+		AC70840B1B56150100E31B45 /* DSExtensionsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSExtensionsTest.h; sourceTree = "<group>"; };
+		AC70840C1B56150100E31B45 /* DSExtensionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSExtensionsTest.m; sourceTree = "<group>"; };
 		ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DSHumanTest.c; sourceTree = "<group>"; };
 		ACB32C571B1FFCC2002AC410 /* DSHumanTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHumanTest.h; sourceTree = "<group>"; };
 		ACB32C5B1B208868002AC410 /* DSArrayTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSArrayTest.c; path = TEST/DSArrayTest/DSArrayTest.c; sourceTree = "<group>"; };
@@ -84,7 +96,7 @@
 		ACFCD2A91B143FD70024B342 /* DSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSObject.h; path = DSObject/DSObject.h; sourceTree = "<group>"; };
 		ACFCD2AB1B143FEF0024B342 /* DSHuman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSHuman.c; path = DSHuman/DSHuman.c; sourceTree = "<group>"; };
 		ACFCD2AC1B143FEF0024B342 /* DSHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSHuman.h; path = DSHuman/DSHuman.h; sourceTree = "<group>"; };
-		ACFCD2AE1B1442620024B342 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		ACFCD2AE1B1442620024B342 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../DSHuman/Task.h; sourceTree = "<group>"; };
 		ACFCD2C41B1C7D7F0024B342 /* DSTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DSTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFCD2D41B1DDDA50024B342 /* DSString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSString.c; path = DSString/DSString.c; sourceTree = "<group>"; };
 		ACFCD2D51B1DDDA50024B342 /* DSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSString.h; path = DSString/DSString.h; sourceTree = "<group>"; };
@@ -117,10 +129,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC3308311B55431500BDBBDA /* DSOrganismMale */ = {
+			isa = PBXGroup;
+			children = (
+				AC33083C1B5543D000BDBBDA /* DSOrganismMale.h */,
+				AC33083D1B5543D000BDBBDA /* DSOrganismMale.m */,
+			);
+			name = DSOrganismMale;
+			sourceTree = "<group>";
+		};
+		AC3308351B55434400BDBBDA /* DSOrganismFemale */ = {
+			isa = PBXGroup;
+			children = (
+				AC3308391B5543A100BDBBDA /* DSOrganismFemale.h */,
+				AC33083A1B5543A100BDBBDA /* DSOrganismFemale.m */,
+			);
+			name = DSOrganismFemale;
+			sourceTree = "<group>";
+		};
 		AC69870C1B4D105D006D054D /* DSObjective-C */ = {
 			isa = PBXGroup;
 			children = (
 				AC69870D1B4D105D006D054D /* main.m */,
+				ACFCD2AE1B1442620024B342 /* Task.h */,
 				AC6987121B4D1075006D054D /* Source */,
 				AC6987131B4D109F006D054D /* Test */,
 				AC33082F1B5526BC00BDBBDA /* DSObjCTest.m */,
@@ -131,6 +162,9 @@
 		AC6987121B4D1075006D054D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				AC7084041B55A57200E31B45 /* NSObject+DSExtensions */,
+				AC3308351B55434400BDBBDA /* DSOrganismFemale */,
+				AC3308311B55431500BDBBDA /* DSOrganismMale */,
 				AC219B7C1B52C41600B9CD21 /* DSOrganism.h */,
 				AC219B7D1B52C41600B9CD21 /* DSOrganism.m */,
 			);
@@ -142,6 +176,8 @@
 			children = (
 				AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */,
 				AC219B801B52C65900B9CD21 /* DSOrganismTest.m */,
+				AC70840B1B56150100E31B45 /* DSExtensionsTest.h */,
+				AC70840C1B56150100E31B45 /* DSExtensionsTest.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -171,6 +207,15 @@
 				AC6C435B1B2C76FC003C6642 /* DSMacros.h */,
 			);
 			name = DSMacros;
+			sourceTree = "<group>";
+		};
+		AC7084041B55A57200E31B45 /* NSObject+DSExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC7084081B55A67A00E31B45 /* NSObject+DSExtensions.h */,
+				AC7084091B55A67A00E31B45 /* NSObject+DSExtensions.m */,
+			);
+			name = "NSObject+DSExtensions";
 			sourceTree = "<group>";
 		};
 		ACB32C591B20881A002AC410 /* DSArray */ = {
@@ -234,7 +279,6 @@
 		ACFCD29E1B143F7C0024B342 /* DSHuman */ = {
 			isa = PBXGroup;
 			children = (
-				ACFCD2AE1B1442620024B342 /* Task.h */,
 				ACFCD29F1B143F7C0024B342 /* main.c */,
 				ACB32C591B20881A002AC410 /* DSArray */,
 				ACFCD2D31B1DDD890024B342 /* DSString */,
@@ -395,8 +439,12 @@
 			files = (
 				AC3308301B5526BC00BDBBDA /* DSObjCTest.m in Sources */,
 				AC69870E1B4D105D006D054D /* main.m in Sources */,
+				AC33083B1B5543A100BDBBDA /* DSOrganismFemale.m in Sources */,
+				AC33083E1B5543D000BDBBDA /* DSOrganismMale.m in Sources */,
+				AC70840D1B56150100E31B45 /* DSExtensionsTest.m in Sources */,
 				AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */,
 				AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */,
+				AC70840A1B55A67A00E31B45 /* NSObject+DSExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

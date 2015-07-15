@@ -40,14 +40,14 @@
     [male sayHello];
     [female sayHello];
     
-    for (DSOrganism *being in male.children) {
-        if (kDSOrganismGenderMale == being.gender) {
-            [being fight];
-        }
-        if (kDSOrganismGenderFemale == being.gender) {
-            [being giveBirth];
-        }
-    }
+//    for (DSOrganism *organism in male.children) {
+//        if (kDSOrganismGenderMale == organism.gender) {
+//            [organism fight];
+//        }
+//        if (kDSOrganismGenderFemale == organism.gender) {
+//            [organism giveBirth];
+//        }
+//    }
     
 }
 

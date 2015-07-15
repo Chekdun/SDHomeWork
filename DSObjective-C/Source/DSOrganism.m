@@ -15,6 +15,8 @@
 //4. У существа наружу должен быть немутабельный массив детей через динамическое проперти с копи+авторелиз, а внутри - еще и мутабельное свойство.
 
 #import "DSOrganism.h"
+#import "DSOrganismMale.h"
+#import "DSOrganismFemale.h"
 
 @interface DSOrganism ()
 
@@ -24,6 +26,13 @@
 @end
 
 @implementation DSOrganism
+
+#pragma mark
+#pragma mark Class methods
+
++ (Class)organismClassForGender:(DSOrganismGender)gender {
+    return kDSOrganismGenderMale == gender ? [DSOrganismMale class] : [DSOrganismFemale class];
+}
 
 @dynamic children;
 
@@ -41,16 +50,26 @@
     return [self initWithGender:kDSOrganismGenderUndefine];
 }
 
-- (instancetype)initWithGender:(DSOrganismGender)gender {
-    self = [super init];
-    
-    if (self) {
-        self.mutableChildren = [NSMutableArray array];
-        self.gender = gender;
+- (id)initWithGender:(DSOrganismGender)gender {
+        self = [super init];
+        if (self) {
+            self.gender = gender;
+        }
+        return self;
     }
-    
-    return self;
-}
+//    self = [super init];
+//    Class organismClass = [[self class] organismClassForGender:gender];
+//    
+//    [self release];
+//    self = [[organismClass alloc] init];
+//    return [[organismClass alloc] init];
+//}
+//    self = [super init];
+//    Class organismClass = [[self class] organismClassForGender:gender];
+//    //[self release];
+//
+//    return [[organismClass alloc] init];
+//}
 
 #pragma mark -
 #pragma mark Accessor
@@ -60,10 +79,10 @@
  }
             
 - (NSString *)description {
-        return [NSString stringWithFormat:@"%@, name: %@, gender: %u, age: %hhu; children: %@",
+        return [NSString stringWithFormat:@"%@, name: %@, gender: %lu, age: %hhu; children: %@",
                 [super description],
                 self.name,
-                self.gender,
+                (unsigned long)self.gender,
                 self.age,
                 self.children];
     }
@@ -71,16 +90,16 @@
 #pragma mark -
 #pragma mark public
 
-- (void)fight {
-    if (kDSOrganismGenderMale == self.gender) {
-        NSLog(@"I am %@ going to WAR", self.name);
-    } else {
-        NSLog(@"I am civilian");
-    }
-}
+//- (void)fight {
+//    if (kDSOrganismGenderMale == self.gender) {
+//        NSLog(@"I am %@ going to WAR", self.name);
+//    } else {
+//        NSLog(@"I am civilian");
+//    }
+//}
 
 - (void)sayHello {
-    NSLog(@"Hello, my name is %@ and I am %u", self.name, self.gender);
+    NSLog(@"Hello, my name is %@ and I am %lu", self.name, (unsigned long)self.gender);
     NSArray *children = self.children;
 
     if ([children count]) {
@@ -91,13 +110,12 @@
     }
 }
 
-- (instancetype)giveBirth {
-    if (kDSOrganismGenderFemale) {
-        DSOrganismGender randomGender = arc4random_uniform(2) + 1;
-
-    return [[[[self class] alloc] initWithGender:randomGender] autorelease];
-    }
-}
+//- (instancetype)giveBirth {
+//    DSOrganismGender randomGender = arc4random_uniform(2) + 1;
+//    if (kDSOrganismGenderFemale) {
+//        return [[[[self class] alloc] initWithGender:randomGender] autorelease];
+//    }
+//}
 
 - (void)addChild:(DSOrganism *)child {
     if (child != nil && NO ==[self.mutableChildren containsObject:child]) {
@@ -107,6 +125,10 @@
 
 - (void)removeChild:(DSOrganism *)child {
     [self.mutableChildren removeObject:child];
+}
+
+- (void)performGenderSpecificOperation {
+    
 }
 
 @end
