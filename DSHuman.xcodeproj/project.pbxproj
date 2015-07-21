@@ -11,6 +11,8 @@
 		AC06079B1B5EABEB00A2E4FA /* DSOrganismFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = AC06079A1B5EABEB00A2E4FA /* DSOrganismFemale.m */; };
 		AC06079E1B5EAC0000A2E4FA /* DSOrganismMale.m in Sources */ = {isa = PBXBuildFile; fileRef = AC06079D1B5EAC0000A2E4FA /* DSOrganismMale.m */; };
 		AC0607A11B5EAC6300A2E4FA /* DSBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607A01B5EAC6300A2E4FA /* DSBuilding.m */; };
+		AC0607A41B5ECFBD00A2E4FA /* DSBuildingCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607A31B5ECFBD00A2E4FA /* DSBuildingCarWash.m */; };
+		AC0607A71B5ED67300A2E4FA /* DSBuildingAdministration.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607A61B5ED67300A2E4FA /* DSBuildingAdministration.m */; };
 		AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B7D1B52C41600B9CD21 /* DSOrganism.m */; };
 		AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B801B52C65900B9CD21 /* DSOrganismTest.m */; };
 		AC69870E1B4D105D006D054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC69870D1B4D105D006D054D /* main.m */; };
@@ -68,6 +70,10 @@
 		AC06079D1B5EAC0000A2E4FA /* DSOrganismMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSOrganismMale.m; path = DSOrganism/DSOrganismMale/DSOrganismMale.m; sourceTree = "<group>"; };
 		AC06079F1B5EAC6300A2E4FA /* DSBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSBuilding.h; path = DSCarWash/DSBuilding/DSBuilding.h; sourceTree = "<group>"; };
 		AC0607A01B5EAC6300A2E4FA /* DSBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSBuilding.m; path = DSCarWash/DSBuilding/DSBuilding.m; sourceTree = "<group>"; };
+		AC0607A21B5ECFBD00A2E4FA /* DSBuildingCarWash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSBuildingCarWash.h; path = DSCarWash/DSBuilding/DSBuildingCarWash.h; sourceTree = "<group>"; };
+		AC0607A31B5ECFBD00A2E4FA /* DSBuildingCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSBuildingCarWash.m; path = DSCarWash/DSBuilding/DSBuildingCarWash.m; sourceTree = "<group>"; };
+		AC0607A51B5ED67300A2E4FA /* DSBuildingAdministration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSBuildingAdministration.h; path = DSCarWash/DSBuilding/DSBuildingAdministration.h; sourceTree = "<group>"; };
+		AC0607A61B5ED67300A2E4FA /* DSBuildingAdministration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSBuildingAdministration.m; path = DSCarWash/DSBuilding/DSBuildingAdministration.m; sourceTree = "<group>"; };
 		AC219B7C1B52C41600B9CD21 /* DSOrganism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSOrganism.h; path = "DSObjective-C/Source/DSOrganism.h"; sourceTree = SOURCE_ROOT; };
 		AC219B7D1B52C41600B9CD21 /* DSOrganism.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSOrganism.m; path = "DSObjective-C/Source/DSOrganism.m"; sourceTree = SOURCE_ROOT; };
 		AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSOrganismTest.h; sourceTree = "<group>"; };
@@ -155,6 +161,10 @@
 			children = (
 				AC06079F1B5EAC6300A2E4FA /* DSBuilding.h */,
 				AC0607A01B5EAC6300A2E4FA /* DSBuilding.m */,
+				AC0607A21B5ECFBD00A2E4FA /* DSBuildingCarWash.h */,
+				AC0607A31B5ECFBD00A2E4FA /* DSBuildingCarWash.m */,
+				AC0607A51B5ED67300A2E4FA /* DSBuildingAdministration.h */,
+				AC0607A61B5ED67300A2E4FA /* DSBuildingAdministration.m */,
 			);
 			name = DSBuilding;
 			sourceTree = "<group>";
@@ -474,6 +484,8 @@
 				AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */,
 				AC06079B1B5EABEB00A2E4FA /* DSOrganismFemale.m in Sources */,
 				AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */,
+				AC0607A71B5ED67300A2E4FA /* DSBuildingAdministration.m in Sources */,
+				AC0607A41B5ECFBD00A2E4FA /* DSBuildingCarWash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

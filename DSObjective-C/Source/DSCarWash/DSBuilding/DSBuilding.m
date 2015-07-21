@@ -13,6 +13,7 @@
 @interface DSBuilding ()
 @property (nonatomic, readwrite) NSMutableArray *mutableWorkplace;
 @property (nonatomic, readwrite) NSMutableArray *mutableEmployee;
+@property (nonatomic, retain)    NSMutableSet   *mutableHumans;
 
 @end
 
@@ -20,8 +21,9 @@
 
 @dynamic workplace;
 @dynamic employee;
+@dynamic mutableHumans;
 
-- (void) dealloc {
+- (void)dealloc {
     self.name = nil;
     self.mutableWorkplace = nil;
     self.mutableEmployee = nil;
@@ -29,9 +31,9 @@
     [super dealloc];
 }
 
-- (instancetype) initWithName:(NSString *)name
-                    workplace:(NSArray *)workplace
-                     employee:(NSArray *)employee
+- (instancetype)initWithName:(NSString *)name
+                   workplace:(NSArray *)workplace
+                    employee:(NSArray *)employee
 {
     self = [super init];
     if (self) {
@@ -42,6 +44,21 @@
     return self;
 }
 
+- (instancetype)init {
+    return [self initWithHumanCapacity:0];
+}
+
+- (instancetype)initWithHumanCapacity:(uint8_t)humanCapacity {
+    self = [super init];
+    
+    if (self) {
+        self.humanCapacity = humanCapacity;
+        self.mutableHumans = [NSMutableSet setWithCapacity:humanCapacity];
+    }
+    
+    return self;
+}
+
 #pragma mark
 #pragma mark Accessors
 
@@ -49,7 +66,7 @@
     return [[self.mutableWorkplace copy] autorelease];
 }
 
-- (NSArray *) employee {
+- (NSArray *)employee {
     return [[self.mutableEmployee copy] autorelease];
 }
 
@@ -67,7 +84,7 @@
     [self.mutableWorkplace removeObject:workplace];
 }
 
--(void)addEmployeeObject:(DSBuilding *)employee {
+-(void)addEmployee:(DSBuilding *)employee {
     NSMutableArray *mutableEmployee = self.mutableEmployee;
     if (![mutableEmployee containsObject:employee]) {
         [self.mutableEmployee addObject:employee];
@@ -78,8 +95,10 @@
     [self.mutableEmployee removeObject:employee];
 }
 
-- (id)performGenderSpecificOperation {
+- (id)performSpecificOperation {
     return nil;
 }
+
+
 
 @end
