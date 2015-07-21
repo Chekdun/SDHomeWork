@@ -22,24 +22,23 @@
 
 + (void) extensionsTest {
 
-    DSOrganism *maleOrganism = [[DSOrganism alloc]initWithGender:kDSOrganismGenderMale];
-    DSOrganism *femaleOrganism = [[DSOrganism alloc] initWithGender:kDSOrganismGenderFemale];
+    DSOrganism *maleOrganism = [[[DSOrganism alloc] initWithGender:kDSOrganismGenderMale] autorelease];
+    DSOrganism *femaleOrganism = [[[DSOrganism alloc] initWithGender:kDSOrganismGenderFemale] autorelease];
     
     NSLog(@"%@", maleOrganism);
     NSLog(@"%@", femaleOrganism);
     
-    NSMutableArray *marray = [[NSMutableArray alloc] init]; {
+    NSMutableArray *marray = [[NSMutableArray alloc] init];
+    [marray release];
+    
+    marray = [NSMutableArray array];
+        
         for (int i = 0 ; i < 5; i++) {
+            [marray addObject:arc4random()];
             [marray addObject:(DSOrganism *)maleOrganism];
             [marray addObject:(DSOrganism *)femaleOrganism];
         }
         NSLog(@"%@", marray);
     }
-    [maleOrganism performGenderSpecificOperation];
-    [femaleOrganism performGenderSpecificOperation];
-    NSLog(@"%@", maleOrganism);
-    
-    
-    
-}
+
 @end

@@ -12,9 +12,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-       // [DSOrganismTest organismTest];
-        [DSExtensionsTest extensionsTest];
-        
+    // [DSOrganismTest organismTest];
+    [DSExtensionsTest extensionsTest];
     }
     
     return 0;

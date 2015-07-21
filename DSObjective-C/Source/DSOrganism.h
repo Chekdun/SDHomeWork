@@ -24,7 +24,6 @@ typedef NS_ENUM(NSUInteger, DSOrganismGender) {
     kDSOrganismGenderFemale
 };
 
-
 @interface DSOrganism : NSObject
 
 @property (nonatomic, copy)             NSString            *name;

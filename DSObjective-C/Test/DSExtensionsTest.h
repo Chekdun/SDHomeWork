@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+DSExtensions.h"
+#import "NSObject+DSExtentions.h"
 #import "DSOrganism.h"
 #import "DSOrganismFemale.h"
 #import "DSOrganismMale.h"

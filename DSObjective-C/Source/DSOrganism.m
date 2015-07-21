@@ -46,15 +46,18 @@
     [super dealloc];
 }
 
-- (instancetype)init {
-    return [self initWithGender:kDSOrganismGenderUndefine];
-}
+//- (instancetype)init {
+//    return [self initWithGender:kDSOrganismGenderUndefine];
+//}
 
 - (id)initWithGender:(DSOrganismGender)gender {
-        self = [super init];
-        if (self) {
-            self.gender = gender;
-        }
+    self = [super init];
+   
+    Class organismClass = [[self class] organismClassForGender:gender];
+    
+    [self release];
+    self = [[organismClass alloc] init];
+    
         return self;
     }
 //    self = [super init];
