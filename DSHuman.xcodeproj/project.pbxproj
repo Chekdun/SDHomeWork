@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC057FF01B62582200C71FE2 /* DSEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = AC057FEF1B62582200C71FE2 /* DSEmployee.m */; };
+		AC057FF31B62586700C71FE2 /* DSCarwasher.m in Sources */ = {isa = PBXBuildFile; fileRef = AC057FF21B62586700C71FE2 /* DSCarwasher.m */; };
+		AC057FF61B62588400C71FE2 /* DSDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = AC057FF51B62588400C71FE2 /* DSDirector.m */; };
+		AC057FF91B6258B900C71FE2 /* DSAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = AC057FF81B6258B900C71FE2 /* DSAccountant.m */; };
+		AC0580011B666AE600C71FE2 /* DSEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0580001B666AE600C71FE2 /* DSEnterprise.m */; };
 		AC0607981B5EABD700A2E4FA /* NSObject+DSExtentions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607971B5EABD700A2E4FA /* NSObject+DSExtentions.m */; };
 		AC06079B1B5EABEB00A2E4FA /* DSOrganismFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = AC06079A1B5EABEB00A2E4FA /* DSOrganismFemale.m */; };
 		AC06079E1B5EAC0000A2E4FA /* DSOrganismMale.m in Sources */ = {isa = PBXBuildFile; fileRef = AC06079D1B5EAC0000A2E4FA /* DSOrganismMale.m */; };
 		AC0607A11B5EAC6300A2E4FA /* DSBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607A01B5EAC6300A2E4FA /* DSBuilding.m */; };
 		AC0607A41B5ECFBD00A2E4FA /* DSBuildingCarWash.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607A31B5ECFBD00A2E4FA /* DSBuildingCarWash.m */; };
 		AC0607A71B5ED67300A2E4FA /* DSBuildingAdministration.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607A61B5ED67300A2E4FA /* DSBuildingAdministration.m */; };
+		AC0607AB1B5F50C200A2E4FA /* DSCar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0607AA1B5F50C200A2E4FA /* DSCar.m */; };
 		AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B7D1B52C41600B9CD21 /* DSOrganism.m */; };
 		AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AC219B801B52C65900B9CD21 /* DSOrganismTest.m */; };
 		AC69870E1B4D105D006D054D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC69870D1B4D105D006D054D /* main.m */; };
@@ -23,6 +29,7 @@
 		ACB32C581B1FFCC2002AC410 /* DSHumanTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C561B1FFCC2002AC410 /* DSHumanTest.c */; };
 		ACB32C5D1B208868002AC410 /* DSArrayTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5B1B208868002AC410 /* DSArrayTest.c */; };
 		ACB32C601B208880002AC410 /* DSArray.c in Sources */ = {isa = PBXBuildFile; fileRef = ACB32C5E1B208880002AC410 /* DSArray.c */; };
+		ACB6816B1B6E6071005E66BD /* DSCarWashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB6816A1B6E6071005E66BD /* DSCarWashTest.m */; };
 		ACCD48A01B1EADC700973BCE /* DSObjectTest.c in Sources */ = {isa = PBXBuildFile; fileRef = ACCD489E1B1EADC700973BCE /* DSObjectTest.c */; };
 		ACFCD2A01B143F7C0024B342 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD29F1B143F7C0024B342 /* main.c */; };
 		ACFCD2AA1B143FD70024B342 /* DSObject.c in Sources */ = {isa = PBXBuildFile; fileRef = ACFCD2A81B143FD70024B342 /* DSObject.c */; };
@@ -62,6 +69,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC057FEE1B62582200C71FE2 /* DSEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSEmployee.h; path = DSCarWash/DSStaff/DSEmployee.h; sourceTree = "<group>"; };
+		AC057FEF1B62582200C71FE2 /* DSEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSEmployee.m; path = DSCarWash/DSStaff/DSEmployee.m; sourceTree = "<group>"; };
+		AC057FF11B62586700C71FE2 /* DSCarwasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSCarwasher.h; path = DSCarWash/DSStaff/DSCarwasher.h; sourceTree = "<group>"; };
+		AC057FF21B62586700C71FE2 /* DSCarwasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSCarwasher.m; path = DSCarWash/DSStaff/DSCarwasher.m; sourceTree = "<group>"; };
+		AC057FF41B62588400C71FE2 /* DSDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSDirector.h; path = DSCarWash/DSStaff/DSDirector.h; sourceTree = "<group>"; };
+		AC057FF51B62588400C71FE2 /* DSDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSDirector.m; path = DSCarWash/DSStaff/DSDirector.m; sourceTree = "<group>"; };
+		AC057FF71B6258B900C71FE2 /* DSAccountant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAccountant.h; path = DSCarWash/DSStaff/DSAccountant.h; sourceTree = "<group>"; };
+		AC057FF81B6258B900C71FE2 /* DSAccountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAccountant.m; path = DSCarWash/DSStaff/DSAccountant.m; sourceTree = "<group>"; };
+		AC057FFF1B666AE600C71FE2 /* DSEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSEnterprise.h; path = DSCarWash/DSEnterprise/DSEnterprise.h; sourceTree = "<group>"; };
+		AC0580001B666AE600C71FE2 /* DSEnterprise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSEnterprise.m; path = DSCarWash/DSEnterprise/DSEnterprise.m; sourceTree = "<group>"; };
 		AC0607961B5EABD700A2E4FA /* NSObject+DSExtentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DSExtentions.h"; path = "DSOrganism/DSExtentions/NSObject+DSExtentions.h"; sourceTree = "<group>"; };
 		AC0607971B5EABD700A2E4FA /* NSObject+DSExtentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DSExtentions.m"; path = "DSOrganism/DSExtentions/NSObject+DSExtentions.m"; sourceTree = "<group>"; };
 		AC0607991B5EABEB00A2E4FA /* DSOrganismFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSOrganismFemale.h; path = DSOrganism/DSOrganismFemale/DSOrganismFemale.h; sourceTree = "<group>"; };
@@ -74,6 +91,8 @@
 		AC0607A31B5ECFBD00A2E4FA /* DSBuildingCarWash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSBuildingCarWash.m; path = DSCarWash/DSBuilding/DSBuildingCarWash.m; sourceTree = "<group>"; };
 		AC0607A51B5ED67300A2E4FA /* DSBuildingAdministration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSBuildingAdministration.h; path = DSCarWash/DSBuilding/DSBuildingAdministration.h; sourceTree = "<group>"; };
 		AC0607A61B5ED67300A2E4FA /* DSBuildingAdministration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSBuildingAdministration.m; path = DSCarWash/DSBuilding/DSBuildingAdministration.m; sourceTree = "<group>"; };
+		AC0607A91B5F50C200A2E4FA /* DSCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSCar.h; path = DSCarWash/DSCar/DSCar.h; sourceTree = "<group>"; };
+		AC0607AA1B5F50C200A2E4FA /* DSCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSCar.m; path = DSCarWash/DSCar/DSCar.m; sourceTree = "<group>"; };
 		AC219B7C1B52C41600B9CD21 /* DSOrganism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSOrganism.h; path = "DSObjective-C/Source/DSOrganism.h"; sourceTree = SOURCE_ROOT; };
 		AC219B7D1B52C41600B9CD21 /* DSOrganism.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSOrganism.m; path = "DSObjective-C/Source/DSOrganism.m"; sourceTree = SOURCE_ROOT; };
 		AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSOrganismTest.h; sourceTree = "<group>"; };
@@ -94,6 +113,8 @@
 		ACB32C5C1B208868002AC410 /* DSArrayTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSArrayTest.h; path = TEST/DSArrayTest/DSArrayTest.h; sourceTree = "<group>"; };
 		ACB32C5E1B208880002AC410 /* DSArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSArray.c; path = DSArray/DSArray.c; sourceTree = "<group>"; };
 		ACB32C5F1B208880002AC410 /* DSArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSArray.h; path = DSArray/DSArray.h; sourceTree = "<group>"; };
+		ACB681691B6E6071005E66BD /* DSCarWashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSCarWashTest.h; path = DSCarWashTest/DSCarWashTest.h; sourceTree = "<group>"; };
+		ACB6816A1B6E6071005E66BD /* DSCarWashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSCarWashTest.m; path = DSCarWashTest/DSCarWashTest.m; sourceTree = "<group>"; };
 		ACCD489E1B1EADC700973BCE /* DSObjectTest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DSObjectTest.c; path = TEST/DSObjectTest/DSObjectTest.c; sourceTree = "<group>"; };
 		ACCD489F1B1EADC700973BCE /* DSObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSObjectTest.h; path = TEST/DSObjectTest/DSObjectTest.h; sourceTree = "<group>"; };
 		ACF62B981B4ACFEF00A6C9D2 /* StudyPlan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyPlan.h; sourceTree = "<group>"; };
@@ -136,6 +157,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC057FE41B6256D200C71FE2 /* DSStaff */ = {
+			isa = PBXGroup;
+			children = (
+				AC057FEE1B62582200C71FE2 /* DSEmployee.h */,
+				AC057FEF1B62582200C71FE2 /* DSEmployee.m */,
+				AC057FF11B62586700C71FE2 /* DSCarwasher.h */,
+				AC057FF21B62586700C71FE2 /* DSCarwasher.m */,
+				AC057FF71B6258B900C71FE2 /* DSAccountant.h */,
+				AC057FF81B6258B900C71FE2 /* DSAccountant.m */,
+				AC057FF41B62588400C71FE2 /* DSDirector.h */,
+				AC057FF51B62588400C71FE2 /* DSDirector.m */,
+			);
+			name = DSStaff;
+			sourceTree = "<group>";
+		};
+		AC057FFE1B666A9C00C71FE2 /* DSEnterprise */ = {
+			isa = PBXGroup;
+			children = (
+				AC057FFF1B666AE600C71FE2 /* DSEnterprise.h */,
+				AC0580001B666AE600C71FE2 /* DSEnterprise.m */,
+			);
+			name = DSEnterprise;
+			sourceTree = "<group>";
+		};
 		AC0607931B5D8AC200A2E4FA /* DSOrganism */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +196,9 @@
 		AC0607941B5D8AF000A2E4FA /* DSCarWash */ = {
 			isa = PBXGroup;
 			children = (
+				AC057FFE1B666A9C00C71FE2 /* DSEnterprise */,
+				AC057FE41B6256D200C71FE2 /* DSStaff */,
+				AC0607A81B5F509900A2E4FA /* DSCar */,
 				AC0607951B5EAB3800A2E4FA /* DSBuilding */,
 			);
 			name = DSCarWash;
@@ -167,6 +215,15 @@
 				AC0607A61B5ED67300A2E4FA /* DSBuildingAdministration.m */,
 			);
 			name = DSBuilding;
+			sourceTree = "<group>";
+		};
+		AC0607A81B5F509900A2E4FA /* DSCar */ = {
+			isa = PBXGroup;
+			children = (
+				AC0607A91B5F50C200A2E4FA /* DSCar.h */,
+				AC0607AA1B5F50C200A2E4FA /* DSCar.m */,
+			);
+			name = DSCar;
 			sourceTree = "<group>";
 		};
 		AC3308311B55431500BDBBDA /* DSOrganismMale */ = {
@@ -212,6 +269,7 @@
 		AC6987131B4D109F006D054D /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				ACB681681B6E604B005E66BD /* DSCarWashTest */,
 				AC219B7F1B52C65900B9CD21 /* DSOrganismTest.h */,
 				AC219B801B52C65900B9CD21 /* DSOrganismTest.m */,
 				AC70840B1B56150100E31B45 /* DSExtensionsTest.h */,
@@ -273,6 +331,15 @@
 				ACB32C5C1B208868002AC410 /* DSArrayTest.h */,
 			);
 			name = DSArrayTest;
+			sourceTree = "<group>";
+		};
+		ACB681681B6E604B005E66BD /* DSCarWashTest */ = {
+			isa = PBXGroup;
+			children = (
+				ACB681691B6E6071005E66BD /* DSCarWashTest.h */,
+				ACB6816A1B6E6071005E66BD /* DSCarWashTest.m */,
+			);
+			name = DSCarWashTest;
 			sourceTree = "<group>";
 		};
 		ACCD489C1B1EAD0400973BCE /* DSHumanTest */ = {
@@ -477,15 +544,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC69870E1B4D105D006D054D /* main.m in Sources */,
+				AC0580011B666AE600C71FE2 /* DSEnterprise.m in Sources */,
+				AC0607AB1B5F50C200A2E4FA /* DSCar.m in Sources */,
 				AC06079E1B5EAC0000A2E4FA /* DSOrganismMale.m in Sources */,
 				AC70840D1B56150100E31B45 /* DSExtensionsTest.m in Sources */,
+				AC057FF61B62588400C71FE2 /* DSDirector.m in Sources */,
 				AC0607981B5EABD700A2E4FA /* NSObject+DSExtentions.m in Sources */,
 				AC0607A11B5EAC6300A2E4FA /* DSBuilding.m in Sources */,
+				ACB6816B1B6E6071005E66BD /* DSCarWashTest.m in Sources */,
 				AC219B811B52C65900B9CD21 /* DSOrganismTest.m in Sources */,
 				AC06079B1B5EABEB00A2E4FA /* DSOrganismFemale.m in Sources */,
+				AC057FF31B62586700C71FE2 /* DSCarwasher.m in Sources */,
+				AC057FF91B6258B900C71FE2 /* DSAccountant.m in Sources */,
 				AC219B7E1B52C41700B9CD21 /* DSOrganism.m in Sources */,
 				AC0607A71B5ED67300A2E4FA /* DSBuildingAdministration.m in Sources */,
 				AC0607A41B5ECFBD00A2E4FA /* DSBuildingCarWash.m in Sources */,
+				AC057FF01B62582200C71FE2 /* DSEmployee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

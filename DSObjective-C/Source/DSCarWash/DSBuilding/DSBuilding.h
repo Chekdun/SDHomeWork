@@ -16,9 +16,8 @@
 @property (nonatomic, assign, readonly) NSArray         *employee;
 @property (nonatomic, assign)           uint8_t         humanCapacity;
 
-- (instancetype)initWithName:(NSString *)name
-                   workplace:(NSArray *)workplace
-                    employee:(NSArray *)employee;
+- (instancetype)initWithWorkplace:(NSArray *)workplace
+                         employee:(NSArray *)employee;
 
 - (instancetype)initWithHumanCapacity:(uint8_t)HumanCapacity;
 

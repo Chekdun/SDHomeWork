@@ -10,4 +10,6 @@
 
 @interface DSCarWashTest : NSObject
 
++ (void) perfomCarWashTests;
+
 @end

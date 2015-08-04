@@ -10,4 +10,18 @@
 
 @implementation DSEmployee
 
+- (id)initWithEmployee:(DSEmployee *)employee
+{
+    self = [super init];
+    if (self) {
+        _employee = employee;
+    }
+    
+    return self;
+}
+
+- (void) performSpecificOperation {
+    
+}
+
 @end

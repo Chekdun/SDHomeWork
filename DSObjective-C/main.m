@@ -9,12 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "DSOrganismTest.h"
 #import "DSExtensionsTest.h"
+#import "DSCarWashTest.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
     // [DSOrganismTest organismTest];
-    [DSExtensionsTest extensionsTest];
+//    [DSExtensionsTest extensionsTest];
+    [DSCarWashTest perfomCarWashTests];
     }
+    
     
     return 0;
 }

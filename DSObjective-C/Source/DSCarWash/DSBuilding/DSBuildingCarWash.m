@@ -48,7 +48,7 @@
 #pragma mark
 #pragma mark Public Methods
 
-- (void)addCars:(DSCar *)car{
+- (void)addCars:(DSCar *)car {
     NSMutableArray *mutableCars = self.mutableCars;
     if (![mutableCars containsObject:car]) {
         [self.mutableCars addObject:car];

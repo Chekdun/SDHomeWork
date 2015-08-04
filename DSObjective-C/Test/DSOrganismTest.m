@@ -16,6 +16,7 @@
 
 #import "DSOrganismTest.h"
 #import "DSOrganism.h"
+#import "DSOrganismFemale.h"
 
 @implementation DSOrganismTest
 + (void) organismTest {

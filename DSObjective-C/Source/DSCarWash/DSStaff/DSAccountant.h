@@ -8,6 +8,11 @@
 
 #import "DSEmployee.h"
 
+@class DSCarwasher;
+
 @interface DSAccountant : DSEmployee
+- (void)getMoney:(DSCarwasher *)carwasher;
+- (void)paySalaryWasherman:(DSCarwasher *)carwasher;
+- (void)paySalaryAccountant:(DSAccountant *)accountant;
 
 @end

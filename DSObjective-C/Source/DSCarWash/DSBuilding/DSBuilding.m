@@ -31,13 +31,12 @@
     [super dealloc];
 }
 
-- (instancetype)initWithName:(NSString *)name
-                   workplace:(NSArray *)workplace
+- (instancetype)initWithWorkplace:(NSArray *)workplace
                     employee:(NSArray *)employee
 {
     self = [super init];
     if (self) {
-        self.name = name;
+        self.name = _name;
         self.mutableWorkplace = [NSMutableArray array];
         self.mutableEmployee = [NSMutableArray array];
     }

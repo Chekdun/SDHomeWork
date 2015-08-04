@@ -8,6 +8,12 @@
 
 #import "DSEmployee.h"
 
+@class DSCar;
+
 @interface DSCarwasher : DSEmployee
+
+@property (nonatomic, retain) DSCar *washCar;
+
+- (void)performSpecificOperation;
 
 @end

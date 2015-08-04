@@ -10,4 +10,12 @@
 
 @implementation DSBuildingAdministration
 
+- (id)performSpecificOperation {
+    [super performSpecificOperation];
+    
+    NSLog(@"This is Office Building");
+    
+    return nil;
+    }
+
 @end

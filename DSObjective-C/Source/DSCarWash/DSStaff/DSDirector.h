@@ -7,7 +7,11 @@
 //
 
 #import "DSEmployee.h"
+@class DSAccountant;
+@class DSCarwasher;
 
 @interface DSDirector : DSEmployee
+
+- (void)getMoneyFromAccountant:(DSAccountant *)accountant fromCarwasher:(DSCarwasher *)carwasher;
 
 @end

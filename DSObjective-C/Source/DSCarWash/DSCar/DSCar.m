@@ -10,4 +10,36 @@
 
 @implementation DSCar
 
+#pragma mark -
+#pragma mark Initializators and Deallocator
+
+- (instancetype)initWithMoney:(float) money {
+    self = [super init];
+    if (self) {
+        self.money = money;
+    }
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark Public Methods
+
++ (instancetype)carWithMoney:(float)money {
+    return [[[self alloc] initWithMoney:money] autorelease];
+}
+
+- (BOOL)payMoney:(float)amount {
+    if ((self.money - amount) < 0) {
+        return NO;
+    }
+    self.money -= amount;
+    
+    return YES;
+}
+
+
+
+
+
 @end

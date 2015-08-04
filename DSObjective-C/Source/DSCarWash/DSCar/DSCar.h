@@ -10,4 +10,13 @@
 
 @interface DSCar : NSObject
 
+@property (nonatomic, assign, getter = isDirty) BOOL    dirty;
+@property (nonatomic, assign)                   float   money;
+
++ (instancetype)carWithMoney:(float)money;
+
+- (instancetype)initWithMoney:(float)money;
+- (BOOL)payMoney:(float)amount;
+
+
 @end
