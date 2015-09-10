@@ -14,7 +14,6 @@
 #import "DSCar.h"
 #import "DSBuilding.h"
 #import "DSBuildingCarWash.h"
-#import "DSBuildingAdministration.h"
 #import "DSMacros.h"
 
 @interface DSEnterprise ()
@@ -45,8 +44,8 @@
         _director = [self getDirector];
         _accountant = [self getAccountant];
         _buildingCarWash = [self getBuildingCarWash];
-        _buildingAdministration = [self getBuildingAdministration];
     }
+    
     return self;
 }
 
@@ -82,21 +81,6 @@
         return buildingCarWash;
 }
 
-- (id) getBuildingAdministration {
-    uint capacity = 1;
-    NSMutableArray *administrationRooms = [NSMutableArray arrayWithCapacity:capacity];
-    for (NSUInteger i = 0; i < capacity; ++i) {
-        DSBuilding *administrationRoom = [[[ DSBuilding alloc] init] autorelease];
-        [administrationRooms addObject:administrationRoom];
-    }
-    NSMutableArray *administrationEmployees = [NSMutableArray arrayWithObjects:self.director, self.accountant, nil];
-    
-    DSBuildingAdministration *buildingAdministration = [[DSBuildingAdministration alloc]
-                                                        initWithWorkplace:administrationRooms
-                                                        employee:administrationEmployees];
-    
-    return buildingAdministration;
-}
 
 #pragma mark -
 #pragma mark Public Methods

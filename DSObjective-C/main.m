@@ -10,6 +10,7 @@
 #import "DSOrganismTest.h"
 #import "DSExtensionsTest.h"
 #import "DSCarWashTest.h"
+#import "DSCar.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
