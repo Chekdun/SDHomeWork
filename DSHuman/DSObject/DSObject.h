@@ -6,13 +6,19 @@
 //  Copyright (c) 2015 DenisSidorov. All rights reserved.
 //
 
+
 #ifndef __DSHuman__DSObject__
 #define __DSHuman__DSObject__
 
-#include <stdlib.h>
 
 #define DSObjectCreateOfType(type) \
 __DSObjectCreate(sizeof(type), (DSObjectDeallocatorCallback)__##type##Deallocate)
+
+#define DSPrimitiveGetter(object, ivar) \
+return (NULL != object) ? object->_ ##ivar : 0
+
+#define DSPointerValueGetter(object, ivar) \
+return (NULL != object) ? object->_ ##ivar : NULL;
 
 typedef void (*DSObjectDeallocatorCallback)(void *);
 

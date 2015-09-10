@@ -7,9 +7,9 @@
 //
 
 #include <assert.h>
+#include <stdlib.h>
 
 #include "DSObject.h"
-
 
 
 void *__DSObjectCreate(size_t objectSize, DSObjectDeallocatorCallback deallocateCallback) {

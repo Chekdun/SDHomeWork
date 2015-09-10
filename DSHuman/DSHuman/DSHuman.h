@@ -11,43 +11,46 @@
 
 #include <stdio.h>
 
+#include "DSString.h"
+#include "DSArray.h"
+
 typedef enum {
     DSHumanUndefined,
     DSHumanMale,
     DSHumanFemale
-} DSGender;
+} DSHumanGender;
 
 typedef struct DSHuman DSHuman;
 
 extern
-DSHuman *DSHumanCreateWithParametrs(DSGender gender, char *name);
+DSHuman *DSHumanCreateWithParametrs(DSHumanGender gender, char *name);
+
+extern
+DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSHumanGender gender, char *name);
 
 extern
 void DSHumanMarriage(DSHuman *human1, DSHuman *human2);
 
 extern
-DSHuman *DSHumanCreateChild(DSHuman *mama, DSHuman *papa, DSGender gender, char *name);
+void DSHumanDivorse(DSHuman *human);
+
+#pragma mark -
+#pragma mark Accessors
 
 extern
-char *DSHumanGetName(DSHuman *ptrhuman);
+DSString *DSHumanGetName(DSHuman *ptrhuman);
 
 extern
 int DSHumanGetAge(DSHuman *ptrhuman);
 
 extern
-DSGender DSHumanGetGender(DSHuman *ptrhuman);
+DSHumanGender DSHumanGetGender(DSHuman *ptrhuman);
 
 extern
-DSHuman *DSHumanGetChildren(DSHuman *ptrhuman);
-
-extern
-void DSHumanSetChild (DSHuman *human, DSHuman *child);
+DSArray *DSHumanGetChildren(DSHuman *ptrhuman);
 
 extern
 DSHuman *DSHumanGetPartner(DSHuman *ptrhuman);
-
-extern
-DSHuman DSHumanSetPartner(DSHuman *partner);
 
 extern
 DSHuman *DSHumanGetMother(DSHuman *ptrhuman);
@@ -58,16 +61,20 @@ DSHuman *DSHumanGetFather(DSHuman *ptrhuman);
 extern
 int DSHumanGetChildrenCount(DSHuman *ptrhuman);
 
-
 extern
 void __DSHumanDeallocate(DSHuman *human);
+
+extern
+void DSHumanAddChild(DSHuman *human, DSHuman *child);
 
 extern
 void DSHumanGenderOutput(DSHuman *human);
 
 extern
-void DSHumanDivorse(DSHuman *human);
+void DSHumanRemoveChild(DSHuman *object, DSHuman *child);
 
+extern
+uint64_t DSHumanGetIndexOfChild(DSHuman *object, DSArray *child);
 
 
 

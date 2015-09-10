@@ -7,6 +7,7 @@
 //
 
 #include <string.h>
+#include <stdlib.h>
 
 #include "DSString.h"
 #include "DSObject.h"
@@ -71,4 +72,6 @@ void DSStringSetData(DSString *string, char *data) {
         string->_data = strdup(data);
     }
 }
+
+
 

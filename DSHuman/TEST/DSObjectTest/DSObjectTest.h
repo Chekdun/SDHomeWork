@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+void DSObjectCreationTest();
+
 #endif /* defined(__DSHuman__DSObjectTest__) */

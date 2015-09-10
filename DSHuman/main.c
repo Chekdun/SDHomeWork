@@ -9,15 +9,22 @@
 #include <stdio.h>
 
 #include "DSHuman.h"
+#include "DSHumanTest.h"
 #include "DSObject.h"
-#include "DSStructures.h"
+#include "DSObjectTest.h"
 #include "DSString.h"
 #include "DSStringTest.h"
+#include "DSArray.h"
+#include "DSArrayTest.h"
 
 int main() {
+
+//    DSStringTest();
+//    DSObjectCreationTest();
 //    DSHumanTest();
-    DSStringTest();
-    DSObjectCreationTest();
+//    DSArrayBehaviourTest();
+
+    
     
     return 0;
 }
