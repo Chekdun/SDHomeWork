@@ -7,29 +7,38 @@
 //
 
 #import "DSAppDelegate.h"
-#import "DSConstant.m"
-#import "DSLableViewController.h"
+#import "DSHolderSquareView.h"
+#import "DSSquareViewController.h"
 
 @interface DSAppDelegate ()
 
 @end
 
 @implementation DSAppDelegate
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  //  self.viewController = [[DSLableViewController alloc] initWithNibName:@"DSSquarView" bundle:nil];
     self.window = window;
-    window.rootViewController = [UITableViewController new];
-    window.backgroundColor = [UIColor grayColor];
-
+    
+    window.rootViewController = [DSSquareViewController new];
+    
     [window makeKeyAndVisible];
-
-    window.rootViewController.view.frame = CGRectMake(0, 0, 100, 100);
-
+    
     return YES;
 }
+
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//  //  self.viewController = [[DSLableViewController alloc] initWithNibName:@"DSSquarView" bundle:nil];
+//    self.window = window;
+//    window.rootViewController = [DSSquareViewController new];
+//    window.backgroundColor = [UIColor grayColor];
+//
+//    [window makeKeyAndVisible];
+//
+//    window.rootViewController.view.frame = CGRectMake(0, 0, 100, 100);
+//
+//    return YES;
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 

@@ -1,5 +1,5 @@
 //
-//  DSSquareView.h
+//  DSHolderSquareView.h
 //  DS-UI
 //
 //  Created by Denis Sidorov on 10.09.15.
@@ -16,8 +16,9 @@ typedef NS_ENUM(NSUInteger, DSSquarePositionType) {
     DSSquarePositionSquarePositionCount
 };
 
-@interface DSSquareView : UIView
+@interface DSHolderSquareView : UIView
 @property (nonatomic, strong)   IBOutlet    UIView      *squareView;
+@property (nonatomic, strong)   IBOutlet    UIButton    *actionButton;
 
 @property (nonatomic, unsafe_unretained) DSSquarePositionType squarePosition ;
 
@@ -27,6 +28,8 @@ typedef NS_ENUM(NSUInteger, DSSquarePositionType) {
 - (void)setSquarePosition:(DSSquarePositionType)position
                  animated:(bool)animation
         completionHandler:(void(^)(void))handler;
+
+- (void)squareMove;
 
 
 

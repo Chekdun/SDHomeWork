@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC9318891BA7C2C200AD85CE /* DSHolderSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9318851BA7C2C200AD85CE /* DSHolderSquareView.m */; };
+		AC93188A1BA7C2C200AD85CE /* DSSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9318871BA7C2C200AD85CE /* DSSquareViewController.m */; };
+		AC93188B1BA7C2C200AD85CE /* DSSquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9318881BA7C2C200AD85CE /* DSSquareViewController.xib */; };
+		AC93188E1BA7C30200AD85CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC93188C1BA7C30200AD85CE /* LaunchScreen.xib */; };
+		AC93188F1BA7C30200AD85CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC93188D1BA7C30200AD85CE /* Images.xcassets */; };
+		AC9318921BA7C63600AD85CE /* UIColor+DSRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9318911BA7C63600AD85CE /* UIColor+DSRandomColor.m */; };
 		ACEE5C721B9FE02800E53829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5C711B9FE02800E53829 /* main.m */; };
 		ACEE5C751B9FE02800E53829 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5C741B9FE02800E53829 /* DSAppDelegate.m */; };
-		ACEE5C781B9FE02800E53829 /* DSLableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5C771B9FE02800E53829 /* DSLableViewController.m */; };
-		ACEE5C7D1B9FE02800E53829 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEE5C7C1B9FE02800E53829 /* Images.xcassets */; };
-		ACEE5C801B9FE02800E53829 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEE5C7E1B9FE02800E53829 /* LaunchScreen.xib */; };
 		ACEE5C8C1B9FE02800E53829 /* UITaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5C8B1B9FE02800E53829 /* UITaskTests.m */; };
-		ACEE5C951B9FE75C00E53829 /* DSLableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEE5C941B9FE75C00E53829 /* DSLableViewController.xib */; };
-		ACEE5CF41BA0D8D000E53829 /* DSSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5CF31BA0D8D000E53829 /* DSSquareView.m */; };
-		ACEE5CF51BA0D8D000E53829 /* DSSquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5CF31BA0D8D000E53829 /* DSSquareView.m */; };
-		ACEE5CF71BA0E14B00E53829 /* DSConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5CF61BA0E14B00E53829 /* DSConstant.m */; };
-		ACEE5CF81BA0E14B00E53829 /* DSConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE5CF61BA0E14B00E53829 /* DSConstant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,24 +41,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC9318841BA7C2C200AD85CE /* DSHolderSquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSHolderSquareView.h; path = Source/UI/DSHolderSquareView.h; sourceTree = SOURCE_ROOT; };
+		AC9318851BA7C2C200AD85CE /* DSHolderSquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSHolderSquareView.m; path = Source/UI/DSHolderSquareView.m; sourceTree = SOURCE_ROOT; };
+		AC9318861BA7C2C200AD85CE /* DSSquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSSquareViewController.h; path = Source/UI/DSSquareViewController.h; sourceTree = SOURCE_ROOT; };
+		AC9318871BA7C2C200AD85CE /* DSSquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSSquareViewController.m; path = Source/UI/DSSquareViewController.m; sourceTree = SOURCE_ROOT; };
+		AC9318881BA7C2C200AD85CE /* DSSquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DSSquareViewController.xib; path = Source/UI/DSSquareViewController.xib; sourceTree = SOURCE_ROOT; };
+		AC93188C1BA7C30200AD85CE /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Resource/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		AC93188D1BA7C30200AD85CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resource/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		AC9318901BA7C63600AD85CE /* UIColor+DSRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+DSRandomColor.h"; path = "Source/Library/UIColor+DSRandomColor.h"; sourceTree = SOURCE_ROOT; };
+		AC9318911BA7C63600AD85CE /* UIColor+DSRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+DSRandomColor.m"; path = "Source/Library/UIColor+DSRandomColor.m"; sourceTree = SOURCE_ROOT; };
 		ACEE5C0F1B9F429000E53829 /* DS-UI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DS-UI"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEE5C6D1B9FE02800E53829 /* UITask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEE5C701B9FE02800E53829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACEE5C711B9FE02800E53829 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ACEE5C731B9FE02800E53829 /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
 		ACEE5C741B9FE02800E53829 /* DSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
-		ACEE5C761B9FE02800E53829 /* DSLableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSLableViewController.h; sourceTree = "<group>"; };
-		ACEE5C771B9FE02800E53829 /* DSLableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSLableViewController.m; sourceTree = "<group>"; };
-		ACEE5C7C1B9FE02800E53829 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ACEE5C7F1B9FE02800E53829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ACEE5C851B9FE02800E53829 /* UITaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACEE5C8A1B9FE02800E53829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACEE5C8B1B9FE02800E53829 /* UITaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITaskTests.m; sourceTree = "<group>"; };
-		ACEE5C941B9FE75C00E53829 /* DSLableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSLableViewController.xib; sourceTree = "<group>"; };
-		ACEE5C961BA00A6E00E53829 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Task.h; path = ../Task.h; sourceTree = "<group>"; };
-		ACEE5CF21BA0D8D000E53829 /* DSSquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSquareView.h; sourceTree = "<group>"; };
-		ACEE5CF31BA0D8D000E53829 /* DSSquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSquareView.m; sourceTree = "<group>"; };
-		ACEE5CF61BA0E14B00E53829 /* DSConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSConstant.m; sourceTree = "<group>"; };
+		ACEE5C961BA00A6E00E53829 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +87,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC93187D1BA7BEEA00AD85CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC93188C1BA7C30200AD85CE /* LaunchScreen.xib */,
+				AC93188D1BA7C30200AD85CE /* Images.xcassets */,
+			);
+			name = Resources;
+			path = UITask;
+			sourceTree = "<group>";
+		};
+		AC93187E1BA7BF6900AD85CE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				AC9318901BA7C63600AD85CE /* UIColor+DSRandomColor.h */,
+				AC9318911BA7C63600AD85CE /* UIColor+DSRandomColor.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		AC93187F1BA7BF9600AD85CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AC9318811BA7BFA800AD85CE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC9318931BA7D68400AD85CE /* DSSquareViewController */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		AC9318931BA7D68400AD85CE /* DSSquareViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AC9318841BA7C2C200AD85CE /* DSHolderSquareView.h */,
+				AC9318851BA7C2C200AD85CE /* DSHolderSquareView.m */,
+				AC9318861BA7C2C200AD85CE /* DSSquareViewController.h */,
+				AC9318871BA7C2C200AD85CE /* DSSquareViewController.m */,
+				AC9318881BA7C2C200AD85CE /* DSSquareViewController.xib */,
+			);
+			name = DSSquareViewController;
+			sourceTree = "<group>";
+		};
 		ACEE5C061B9F429000E53829 = {
 			isa = PBXGroup;
 			children = (
+				ACEE5C961BA00A6E00E53829 /* Task.h */,
+				ACEE5CED1BA0CCC600E53829 /* Source */,
+				AC93187D1BA7BEEA00AD85CE /* Resources */,
 				ACEE5C6E1B9FE02800E53829 /* UITask */,
 				ACEE5C881B9FE02800E53829 /* UITaskTests */,
 				ACEE5C101B9F429000E53829 /* Products */,
@@ -110,23 +158,12 @@
 		ACEE5C6E1B9FE02800E53829 /* UITask */ = {
 			isa = PBXGroup;
 			children = (
-				ACEE5C961BA00A6E00E53829 /* Task.h */,
-				ACEE5CF61BA0E14B00E53829 /* DSConstant.m */,
-				ACEE5CED1BA0CCC600E53829 /* Source */,
-				ACEE5C7C1B9FE02800E53829 /* Images.xcassets */,
-				ACEE5C7E1B9FE02800E53829 /* LaunchScreen.xib */,
-				ACEE5C6F1B9FE02800E53829 /* Supporting Files */,
+				ACEE5C731B9FE02800E53829 /* DSAppDelegate.h */,
+				ACEE5C741B9FE02800E53829 /* DSAppDelegate.m */,
+				ACEE5C711B9FE02800E53829 /* main.m */,
+				ACEE5C701B9FE02800E53829 /* Info.plist */,
 			);
 			path = UITask;
-			sourceTree = "<group>";
-		};
-		ACEE5C6F1B9FE02800E53829 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ACEE5C701B9FE02800E53829 /* Info.plist */,
-				ACEE5C711B9FE02800E53829 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		ACEE5C881B9FE02800E53829 /* UITaskTests */ = {
@@ -149,15 +186,12 @@
 		ACEE5CED1BA0CCC600E53829 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				ACEE5C731B9FE02800E53829 /* DSAppDelegate.h */,
-				ACEE5C741B9FE02800E53829 /* DSAppDelegate.m */,
-				ACEE5C761B9FE02800E53829 /* DSLableViewController.h */,
-				ACEE5C771B9FE02800E53829 /* DSLableViewController.m */,
-				ACEE5C941B9FE75C00E53829 /* DSLableViewController.xib */,
-				ACEE5CF21BA0D8D000E53829 /* DSSquareView.h */,
-				ACEE5CF31BA0D8D000E53829 /* DSSquareView.m */,
+				AC93187E1BA7BF6900AD85CE /* Library */,
+				AC93187F1BA7BF9600AD85CE /* Model */,
+				AC9318811BA7BFA800AD85CE /* UI */,
 			);
 			name = Source;
+			path = UITask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +296,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACEE5C801B9FE02800E53829 /* LaunchScreen.xib in Resources */,
-				ACEE5C951B9FE75C00E53829 /* DSLableViewController.xib in Resources */,
-				ACEE5C7D1B9FE02800E53829 /* Images.xcassets in Resources */,
+				AC93188E1BA7C30200AD85CE /* LaunchScreen.xib in Resources */,
+				AC93188F1BA7C30200AD85CE /* Images.xcassets in Resources */,
+				AC93188B1BA7C2C200AD85CE /* DSSquareViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACEE5CF71BA0E14B00E53829 /* DSConstant.m in Sources */,
-				ACEE5CF41BA0D8D000E53829 /* DSSquareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACEE5CF51BA0D8D000E53829 /* DSSquareView.m in Sources */,
-				ACEE5CF81BA0E14B00E53829 /* DSConstant.m in Sources */,
-				ACEE5C781B9FE02800E53829 /* DSLableViewController.m in Sources */,
 				ACEE5C751B9FE02800E53829 /* DSAppDelegate.m in Sources */,
+				AC9318891BA7C2C200AD85CE /* DSHolderSquareView.m in Sources */,
+				AC9318921BA7C63600AD85CE /* UIColor+DSRandomColor.m in Sources */,
 				ACEE5C721B9FE02800E53829 /* main.m in Sources */,
+				AC93188A1BA7C2C200AD85CE /* DSSquareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,17 +348,6 @@
 			targetProxy = ACEE5C861B9FE02800E53829 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		ACEE5C7E1B9FE02800E53829 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACEE5C7F1B9FE02800E53829 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ACEE5C141B9F429000E53829 /* Debug */ = {

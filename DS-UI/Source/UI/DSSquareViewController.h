@@ -1,5 +1,5 @@
 //
-//  DSLableViewController.h
+//  DSSquareViewController.h
 //  UITask
 //
 //  Created by Denis Sidorov on 09.09.15.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DSLableViewController : UIViewController
-
+@interface DSSquareViewController : UIViewController
 
 @end
